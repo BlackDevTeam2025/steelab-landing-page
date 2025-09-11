@@ -20960,6 +20960,11 @@ strong {
 #about-us .number-box {
   margin-bottom: 200px;
 }
+@media (max-width: 991px) {
+  #about-us .number-box {
+    margin-bottom: 50px;
+  }
+}
 #about-us .number-box .number-front {
   font-weight: 500;
   font-size: 58px;
@@ -21341,6 +21346,15 @@ strong {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   margin-bottom: 40px;
 }
+.tech-card .tab-content {
+  position: relative;
+}
+.tech-card .tab-content .item-tasb {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
 
 .tech-grid {
   display: grid;
@@ -21353,6 +21367,11 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  list-style: none;
+}
+.tech-categories .tech-category.active {
+  background: #00D4FF;
+  color: var(--color-white);
 }
 
 .tech-category {
@@ -21363,14 +21382,6 @@ strong {
   padding: 12px 20px;
   border-radius: 4px;
   transition: all 0.3s ease;
-}
-.tech-category.active {
-  background-color: #00bcd4;
-  color: white;
-}
-.tech-category:not(.active) {
-  color: #333;
-  background-color: transparent;
 }
 
 .tech-items {
@@ -22654,7 +22665,7 @@ strong {
     gap: 30px;
   }
   .tech-categories {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -22663,7 +22674,8 @@ strong {
     gap: 15px;
   }
   .tech-card {
-    padding: 30px 20px;
+    padding: 30px 15px;
+    min-height: 700px;
   }
   .cooperation-section {
     padding: 40px 15px;
@@ -22750,9 +22762,6 @@ strong {
   }
   .card {
     min-height: 160px;
-  }
-  .brand-slider {
-    padding-inline: 48px;
   }
   .blog-title {
     font-size: 36px;

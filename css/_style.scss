@@ -235,6 +235,9 @@
     }
     .number-box{  
         margin-bottom: 200px;
+        @media (max-width:991px) {
+            margin-bottom: 50px;
+        } 
         .number-front{
             font-weight: 500; 
             font-size: 58px; 

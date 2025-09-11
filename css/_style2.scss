@@ -77,6 +77,18 @@
 	padding: 40px;
 	box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 	margin-bottom: 40px;
+	.tech-category{
+		 
+	}
+	.tab-content{
+		position: relative; 
+		.item-tasb{
+			position: absolute;
+			width: 100%;
+			left: 0px;
+			top: 0px; 
+		}
+	}
 }
 .tech-grid {
 	display: grid;
@@ -88,6 +100,13 @@
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+	list-style: none;
+	.tech-category{
+		&.active{
+			background: #00D4FF;
+			color: var(--color-white);
+		}
+	}
 }
 .tech-category {
 	font-size: 14px;
@@ -96,15 +115,7 @@
 	letter-spacing: 1px;
 	padding: 12px 20px;
 	border-radius: 4px;
-	transition: all 0.3s ease;
-	&.active {
-		background-color: #00bcd4;
-		color: white;
-	}
-	&:not(.active) {
-		color: #333;
-		background-color: transparent;
-	}
+	transition: all 0.3s ease;  
 }
 .tech-items {
 	display: grid;
@@ -676,7 +687,7 @@
 	color: #fff;
 	text-align: left;
 }
-.brand-slider {
+.brand-slider { 
 	 .owl-nav{
 		.owl-next, .owl-prev{
 			width: 32px;
@@ -700,7 +711,7 @@
 			@media (max-width:991px) {
 				right: -10px;
 			}
-		}
+		} 
 	}
 }
 .viewport {
@@ -1345,7 +1356,7 @@
         gap: 30px;
     }
     .tech-categories {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -1353,8 +1364,9 @@
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 15px;
     }
-    .tech-card {
-        padding: 30px 20px;
+    .tech-card{
+        padding: 30px 15px; 
+		min-height: 700px;
     }
     .cooperation-section {
         padding:40px 15px;
@@ -1453,8 +1465,7 @@
     .member-name {
         font-size: 24px;
     }
-     .card{ min-height:160px }
-    .brand-slider{ padding-inline:48px }
+    .card{ min-height:160px }
     .blog-title {
         font-size: 36px;
     }
