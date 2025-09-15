@@ -1,1020 +1,1019 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="css/main.css" rel="stylesheet" /> 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>SteeLab - Smart Contract Development</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SteeLab - Leading Software Development Company | Web3, Blockchain &amp; AI Solutions</title>
+  <!-- ! Page Title Icon -->
+  <link rel="icon" href="images/microchip-solid.svg" type="image/svg+xml">
+  <!-- ! Font Awesome Library -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- ! Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ! Main Template CSS File -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkMode.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <!-- ! Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+  <!-- ! AOS Library -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
-<body>
-   <header class="header"> 
-        <div class="container">
+
+<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+  <!-- ! Start Header -->
+  <header class="d-flex align-items-center fixed-top justify-content-around bg-transparent">
+    <!-- ! Start Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="SteeLab" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span>
+            <i class="fa-solid fa-sliders"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="protofolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Team</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Menu
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li><a class="dropdown-item" href="packages.html">Pricing</a></li>
+                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                <li><a class="dropdown-item" href="privacy-policy.html">Terms & Conditions</a></li>
+                <li><a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
+                <li><a class="dropdown-item" href="blog-details.html">Blog Detail Page</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">News</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-primary rounded-pill get-quotes"><a href="contact.html">Get
+              Quotes</a></button>
+          <button id="darkmode-button" class="btn rounded-circle">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- ! End Navbar -->
+  </header>
+  <!-- ! End Header -->
+  <!-- ! Start Landing -->
+  <main>
+    <div class="landing">
+      <div class="overlay"></div>
+      <div id="particles-js">
+        <canvas width="1170" height="2532" style="width: 100%; height: 100%;"></canvas>
+      </div>
+      <div class="container letters">
+        <div class="row gy-5">
+          <div
+            class="col-lg-7 offset-lg-5 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+            <h2 data-aos="fade-up" class="">Delivering Superior Services
+              <span>IT Solutions</span>
+              <span class="circle" data-aos="fade-right" data-aos-delay="800">.</span>
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="400" class="">You can easily change any design to
+              your
+              own. It is also highly customizable SEO friendly template.</p>
+            <div class="social" data-aos="fade-up" data-aos-delay="600">
+              <a href="https://github.com/GziXnine" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/1ahmed-allam/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-start buttons">
+              <button style="--ripples: 12;" class="btn-custom" data-aos="fade-up" data-aos-delay="700"
+                onclick="scrollToSection('#contact-us')">Get Quotes</button>
+              <button style="--ripples: 12;" class="btn-custom" data-aos="fade-up" data-aos-delay="700"
+                onclick="scrollToSection('#services')">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Landing -->
+    <!-- ! Start Services -->
+    <div class="services py-5" id="services">
+      <div class="container">
+        <div data-aos="fade-up" data-aos-delay="100">
+          <img src="images/service-design.svg" alt="">
+          <h4>Application Design</h4>
+          <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <img src="images/service-hosting.svg" alt="">
+          <h4>Web Hosting</h4>
+          <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="500">
+          <img src="images/service-social.svg" alt="">
+          <h4>Social Media</h4>
+          <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <img src="images/service-seo.svg" alt="">
+          <h4>SEO Optimization</h4>
+          <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <img src="images/service-cloud.svg" alt="">
+          <h4>Cloud Server</h4>
+          <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="500">
+          <img src="images/service-secure.svg" alt="">
+          <h4>Data Security</h4>
+          <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Services -->
+    <!-- ! Start About Us -->
+    <div class="about-us" id="about-us">
+      <div class="header" data-aos="fade-up" data-aos-delay="100">
+        <div class="title">Why Choose Us</div>
+        <p class="para">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 left">
             <div class="row">
-                <div class="menu_mb">
-                    <button class="nav-toggle">
-                        <span></span>
-                    </button>
-                    <a href="" class="logo_mb visible-sm visible-xs">
-                        <img class="img_logo_mb" src="images/logo.png" alt="" />
-                    </a> 
+              <div class="col-lg-12 box" data-aos="fade-up" data-aos-delay="100">
+                <div class="text">
+                  <h4>Experience</h4>
+                  <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
-            </div>  
-        </div> 
-        <!-- /menu_mb --> 
-        <div class="menu_header">
-            <div class="header-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 hidden-sm hidden-xs">
-                            <a href="" class="logo_pc">
-                                <img src="images/logo.png" alt="" />
-                            </a> 
-                        </div>
-                        <div class="col-md-7 col-sm-7 col-xs-12">
-                            <div class="menu_main">
-                                <nav class="nav is-fixed">
-                                    <div class="nav-container">
-                                        <ul class="nav-menu menu clearfix"> 
-                                            <li class="menu-item">
-                                                <a href="" class="logo_menu">
-                                                    <img src="images/logo.png" alt="" />
-                                                </a> 
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="" class="menu-link">Trang chủ</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="" class="menu-link">Giới thiệu</a>
-                                            </li>
-                                            <li class="menu-item has-dropdown">
-                                                <a href="" class="menu-link">Sản phẩm</a>
-                                                <ul class="nav-dropdown menu">
-                                                    <li class="menu-item">
-                                                        <a href="" class="menu-link">sản phẩm 1</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="#" class="menu-link">sản phẩm 2</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="#" class="menu-link">sản phẩm 3</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="#" class="menu-link">sản phẩm 4</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item has-dropdown">
-                                                <a href="" class="menu-link">Tin tức</a>
-                                                <ul class="nav-dropdown menu">
-                                                    <li class="menu-item">
-                                                        <a href="detail_news.html" class="menu-link">Tin tức 1</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="" class="menu-link">Báo giá</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                            <!-- menu main -->
-                        </div> 
-                    </div>
+                <img src="images/icon-1.svg" alt="">
+              </div>
+              <div class="col-lg-12 box" data-aos="fade-up" data-aos-delay="400">
+                <div class="text">
+                  <h4>Products</h4>
+                  <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
+                <img src="images/icon-2.svg" alt="">
+              </div>
+              <div class="col-lg-12 box" data-aos="fade-up" data-aos-delay="500">
+                <div class="text">
+                  <h4>Approach</h4>
+                  <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+                <img src="images/icon-3.svg" alt="">
+              </div>
             </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 center">
+            <div class="row">
+              <div class="col-lg-4 col-sm-12" data-aos="fade-up" data-aos-delay="500">
+                <img src="images/features.jpg" alt="" class="middle">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 right">
+            <div class="row">
+              <div class="col-lg-12 box" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/icon-4.svg" alt="">
+                <div class="text">
+                  <h4>Pricing</h4>
+                  <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+              </div>
+              <div class="col-lg-12 box" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/icon-5.svg" alt="">
+                <div class="text">
+                  <h4>Delivery</h4>
+                  <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+              </div>
+              <div class="col-lg-12 box" data-aos="fade-up" data-aos-delay="500">
+                <img src="images/icon-6.svg" alt="">
+                <div class="text">
+                  <h4>Support</h4>
+                  <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--slide-->
-    </header>
-    <main class="main-content">
-        <div class="clearfix"></div>
-        <section id="banner" >
-            <div class="slider-main owl-carousel">
-                <div class="item">
-                    <img src="images/banner.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="images/banner.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="images/banner.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="images/banner.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="images/banner.png" alt="">
-                </div>
+      </div>
+    </div>
+    <!-- ! End About Us -->
+    <!-- ! Start Protfolio -->
+    <div class="protofolio" id="protofolio">
+      <div class="header" data-aos="fade-up" data-aos-delay="100">
+        <div class="title">Our Protfolio</div>
+        <p class="para">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-portfolio-filter="*" data-portfolio-layout="masonry"
+        data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+        <div class="buttons">
+          <button type="button" data-cat="all" class="btn btn-primary rounded-5 rounded-end active">All</button>
+          <button type="button" data-cat="app-des" class="btn btn-primary rounded-0">Design</button>
+          <button type="button" data-cat="app-dev" class="btn btn-primary rounded-0">Development</button>
+          <button type="button" data-cat="brand" class="btn btn-primary rounded-0">Branding</button>
+          <button type="button" data-cat="it-sol" class="btn btn-primary rounded-5 rounded-start">It</button>
+        </div>
+        <div class="photos">
+          <div class="container">
+            <div class="photo all app-des" data-aos="fade-up" data-aos-delay="100">
+              <img src="images/product-1.jpg" alt="">
             </div>
-            <div class="particle-container"></div>
-        </section>
-        <div class="clearfix"></div>
-        <section id="partner" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <h2 class="title-partner">
-                            Our Clients
-                        </h2>
+            <div class="photo all app-dev" data-aos="fade-up" data-aos-delay="200">
+              <img src="images/product-2.jpg" alt="">
+            </div>
+            <div class="photo all brand" data-aos="fade-up" data-aos-delay="400">
+              <img src="images/product-3.jpg" alt="">
+            </div>
+            <div class="photo all it-sol" data-aos="fade-up" data-aos-delay="100">
+              <img src="images/product-4.jpg" alt="">
+            </div>
+            <div class="photo all app-des" data-aos="fade-up" data-aos-delay="200">
+              <img src="images/product-5.jpg" alt="">
+            </div>
+            <div class="photo all brand" data-aos="fade-up" data-aos-delay="500">
+              <img src="images/product-6.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Protfolio -->
+    <!-- ! Start Pricing Plan -->
+    <div class="pricing" id="pricing">
+      <div class="header" data-aos="fade-up" data-aos-delay="100">
+        <div class="title">Pricing Plans</div>
+        <p class="para">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+              <div class="title">
+                <h2>Basic</h2>
+              </div>
+              <div class="price">
+                <h4><sup>$</sup>25</h4>
+              </div>
+              <div class="option">
+                <ul class="list-unstyled">
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Unlimited GB Space</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> 30 Domain Names</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Free SSL</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Daily Backup</li>
+                  <li><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> Free Templates</li>
+                  <li><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> Free Email</li>
+                  <li><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> 10 Databases</li>
+                  <li><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> Unlimited Email Address</li>
+                  <li><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> Live Support</li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">Order Now</button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card text-center" data-aos="fade-up" data-aos-delay="300">
+              <div class="title">
+                <h2>Standard</h2>
+              </div>
+              <div class="price">
+                <h4><sup>$</sup>50</h4>
+              </div>
+              <div class="option">
+                <ul class="list-unstyled">
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Unlimited GB Space</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> 30 Domain Names</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Free SSL</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Daily Backup</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Free Templates</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Free Email</li>
+                  <li><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> 10 Databases</li>
+                  <li><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> Unlimited Email Address</li>
+                  <li><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> Live Support</li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">Order Now</button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card text-center" data-aos="fade-up" data-aos-delay="600">
+              <div class="title">
+                <h2>Premium</h2>
+              </div>
+              <div class="price">
+                <h4><sup>$</sup>100</h4>
+              </div>
+              <div class="option">
+                <ul class="list-unstyled">
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Unlimited GB Space</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> 30 Domain Names</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Free SSL</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Daily Backup</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Free Templates</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Free Email</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> 10 Databases</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Unlimited Email Address</li>
+                  <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Live Support</li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Pricing Plan -->
+    <!-- ! Start Testimonials -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+        <div class="header" data-aos="fade-up" data-aos-delay="100">
+          <div class="title">Testimonials</div>
+          <p class="para">Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="swiper slides-3 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper" aria-live="off"
+            style="transform: translate3d(-3904px, 0px, 0px); transition-duration: 0ms;">
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group"
+              aria-label="4 / 4" style="width: 936px; margin-right: 40px;" data-swiper-slide-index="3">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center info-box">
+                    <img src="images/testimonial-4.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Fizzi Brandon</h3>
+                      <h4>Freelancer</h4>
+                      <div class="stars">
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                      </div>
                     </div>
-                    <div class="col-md-9 col-sm-9 col-xs-12">
-                        <div class="slider-partner owl-carousel">
-                            <div class="item">
-                                <img src="images/patner-1.png" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="images/patner-2.png" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="images/patner-3.png" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="images/patner-4.png" alt="">
-                            </div> 
-                        </div>
-                    </div>
+                  </div>
+                  <p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam.
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
-        <section id="about-us" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <div class="row row-count">
-                    <div class="col-md-12"> 
-                        <p class="sub-title-home">Here’s what you need to know</p>
-                        <h2 class="title-home">About Us</h2>
+
+            <!-- Testimonial Item 1 -->
+            <div class="swiper-slide swiper-slide-duplicate-next" role="group" aria-label="1 / 4"
+              style="width: 936px; margin-right: 40px;" data-swiper-slide-index="0">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center info-box">
+                    <img src="images/testimonial-1.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Jhone Doe</h3>
+                      <h4>CFO</h4>
+                      <div class="stars">
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled far fa-star"></i>
+                        <i class="filled far fa-star"></i>
+                      </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="number-box"> 
-                            <div class="number-front count-up" data-target="65">0</div>
-                            <div class="text">
-                                <p>blockchain</p>
-                                <p>engineers</p> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="number-box"> 
-                            <div class="number-front count-up" data-target="130">0</div>
-                            <div class="text">
-                                <p>projects</p>
-                                <p>launched</p>  
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="number-box"> 
-                            <div class="number-front count-up" data-target="25">0</div>
-                            <div class="text">
-                                <p>blockchains</p>
-                                <p>mastered</p>   
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="number-box"> 
-                            <div class="number-front count-up" data-target="7">0</div>
-                            <div class="text">
-                                <p>years of</p>
-                                <p>experience</p>  
-                            </div> 
-                        </div>
-                    </div>
+                  </div>
+                  <p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam.
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
-        <section id="blockchain" data-aos="fade-up" data-aos-duration="1000"> 
-            <div class="container">
-                <div class="row row-fix">
-                    <div class="col-md-12">
-                        <p class="sub-title-home">We take care of</p>
-                        <h2 class="title-home">
-                            Blockchain<br>
-                            Development
-                        </h2>
-                        <div class="desc_blockchain">
-                            <p>
-                                SteeLab as a blockchain development team provides a wide range of 
-                                outsourced blockchain software development services. 
-                                This includes building blockchain ecosystems, smart contracts, 
-                                dApps, as well as integrating blockchains and enterprise solutions.
-                            </p>
-                        </div>
+
+            <!-- Testimonial Item 2 -->
+            <div class="swiper-slide" role="group" aria-label="2 / 4" style="width: 936px; margin-right: 40px;"
+              data-swiper-slide-index="1">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center info-box">
+                    <img src="images/testimonial-2.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Afa Rose</h3>
+                      <h4>Web Designer</h4>
+                      <div class="stars">
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled far fa-star"></i>
+                      </div>
                     </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12"> 
-                        <div class="slider-blockchain owl-carousel">
-                            <div class="item">
-                                <div class="service-card">
-                                    <div class="item-card">
-                                        <h3 class="card-title">Enterprise Solutions</h3>
-                                        <p class="card-description">
-                                            Bring your business to the next level with innovative technologies and services.
-                                        </p>
-                                        <ul class="service-list">
-                                            <li>governance (voting) systems</li>
-                                            <li>blockchain-based loyalty programs</li>
-                                            <li>micropayment services</li>
-                                            <li>supply chains</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="service-card">
-                                    <div class="item-card">
-                                        <h3 class="card-title">Enterprise Solutions</h3>
-                                        <p class="card-description">
-                                            Bring your business to the next level with innovative technologies and services.
-                                        </p>
-                                        <ul class="service-list">
-                                            <li>governance (voting) systems</li>
-                                            <li>blockchain-based loyalty programs</li>
-                                            <li>micropayment services</li>
-                                            <li>supply chains</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="service-card">
-                                    <div class="item-card">
-                                        <h3 class="card-title">Enterprise Solutions</h3>
-                                        <p class="card-description">
-                                            Bring your business to the next level with innovative technologies and services.
-                                        </p>
-                                        <ul class="service-list">
-                                            <li>governance (voting) systems</li>
-                                            <li>blockchain-based loyalty programs</li>
-                                            <li>micropayment services</li>
-                                            <li>supply chains</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="service-card">
-                                    <div class="item-card">
-                                        <h3 class="card-title">Enterprise Solutions</h3>
-                                        <p class="card-description">
-                                            Bring your business to the next level with innovative technologies and services.
-                                        </p>
-                                        <ul class="service-list">
-                                            <li>governance (voting) systems</li>
-                                            <li>blockchain-based loyalty programs</li>
-                                            <li>micropayment services</li>
-                                            <li>supply chains</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="service-card">
-                                    <div class="item-card">
-                                        <h3 class="card-title">Enterprise Solutions</h3>
-                                        <p class="card-description">
-                                            Bring your business to the next level with innovative technologies and services.
-                                        </p>
-                                        <ul class="service-list">
-                                            <li>governance (voting) systems</li>
-                                            <li>blockchain-based loyalty programs</li>
-                                            <li>micropayment services</li>
-                                            <li>supply chains</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="service-card">
-                                    <div class="item-card">
-                                        <h3 class="card-title">Enterprise Solutions</h3>
-                                        <p class="card-description">
-                                            Bring your business to the next level with innovative technologies and services.
-                                        </p>
-                                        <ul class="service-list">
-                                            <li>governance (voting) systems</li>
-                                            <li>blockchain-based loyalty programs</li>
-                                            <li>micropayment services</li>
-                                            <li>supply chains</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="col-md-12">
-                        <p class="sub-title-home">We provide different</p>
-                        <h2 class="title-home">
-                            Blockchain<br>
-                            Services
-                        </h2> 
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="item-services">
-                            <h3 class="title-services">
-                                Security <br>  
-                                Audit
-                            </h3>
-                            <div class="desc-services">
-                                <p>
-                                    A detailed and comprehensive
-                                    review of code vulnerabilities as
-                                    well as recommendations on their
-                                    elimination.
-                                </p>
-                            </div> 
-                            <a href="" class="btn-commont">
-                                See all security services
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="item-services">
-                            <h3 class="title-services">
-                                Technical Due <br>  
-                                Diligence 
-                            </h3>
-                            <div class="desc-services">
-                                <p>
-                                    A detailed independent inspection
-                                    made by SteeLab auditors followed
-                                    by the general assessment of the
-                                    platform or protocol.
-                                </p>
-                            </div> 
-                        </div>
-                    </div>
+                  </div>
+                  <p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam.
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
-        <section id="following" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 contact-box">
-                        <div class="row">
-                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                <h4 class="sub-contact">Hire the SteeLab team to</h4>
-                                <h3 class="title-contact">
-                                    Get Top-quality Blockchain <br>
-                                    Development Services
-                                </h3>
-                            </div>
-                            <div class="col-md-5 col-sm-5 col-xs-12">
-                                <div class="btm-contact">
-                                    <a href="" class="btn-commont">
-                                        CONTACT US
-                                    </a>
-                                </div> 
-                            </div>
-                        </div>
+
+            <!-- Testimonial Item 3 -->
+            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="3 / 4"
+              style="width: 936px; margin-right: 40px;" data-swiper-slide-index="2">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center info-box">
+                    <img src="images/testimonial-3.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3>Keena Lara</h3>
+                      <h4>Store Owner</h4>
+                      <div class="stars">
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled fas fa-star"></i>
+                        <i class="filled far fa-star"></i>
+                        <i class="filled far fa-star"></i>
+                        <i class="filled far fa-star"></i>
+                      </div>
                     </div>
-                    <div class="col-md-12"> 
-                        <p class="sub-title-home">We use the following</p>
-                        <h2 class="title-home">Technologies</h2>
-                        <div class="desc_blockchain">
-                            <p>
-                                As a web3 development firm, SteeLab only hires highly specialized
-                                developers with a proven track record. That’s why we can handle any
-                                task or project, even the most complex ones.
-                            </p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-grid">
-                                <ul class="tech-categories">
-                                    <li class="tech-category active"><a data-toggle="tab" href="#home">Blockchain</a></li>
-                                    <li class="tech-category"><a data-toggle="tab" href="#home2">Back-End</a></li>
-                                    <li class="tech-category"><a data-toggle="tab" href="#home3">Front-End</a></li> 
-                                </ul> 
-                                <div class="tab-content">
-                                    <div class="fade item-tasb in active" id="home">
-                                        <div class="tech-items">
-                                            <div class="tech-item">Ethereum</div>
-                                            <div class="tech-item">BNB Chain</div>
-                                            <div class="tech-item">Polygon</div>
-                                            <div class="tech-item">NEAR</div>
-                                            <div class="tech-item">Solana</div>
-                                            <div class="tech-item">Avalanche</div>
-                                            <div class="tech-item">Arbitrum</div>
-                                            <div class="tech-item">Optimism</div>
-                                            <div class="tech-item">Aurora</div>
-                                            <div class="tech-item">Aptos</div>
-                                            <div class="tech-item">Sui</div>
-                                            <div class="tech-item">TON</div>
-                                            <div class="tech-item">Polkadot</div>
-                                            <div class="tech-item">Cosmos</div>
-                                            <div class="tech-item">Secret Network</div>
-                                            <div class="tech-item">StarkNet</div>
-                                        </div> 
-                                    </div>
-                                    <div class="fade item-tasb" id="home2">
-                                        <div class="tech-items">
-                                            <div class="tech-item">Ethereum</div>
-                                            <div class="tech-item">BNB Chain</div>
-                                            <div class="tech-item">Polygon</div>
-                                            <div class="tech-item">NEAR</div>
-                                            <div class="tech-item">Solana</div>
-                                            <div class="tech-item">Avalanche</div>
-                                            <div class="tech-item">Arbitrum</div>
-                                            <div class="tech-item">Optimism</div>
-                                            <div class="tech-item">Aurora</div>
-                                            <div class="tech-item">Aptos</div>
-                                            <div class="tech-item">Sui</div>
-                                            <div class="tech-item">TON</div>
-                                            <div class="tech-item">Polkadot</div>
-                                            <div class="tech-item">Cosmos</div>
-                                            <div class="tech-item">Secret Network</div>
-                                            <div class="tech-item">StarkNet</div>
-                                        </div> 
-                                    </div>
-                                    <div class="fade item-tasb" id="home3">
-                                        <div class="tech-items">
-                                            <div class="tech-item">Ethereum</div>
-                                            <div class="tech-item">BNB Chain</div>
-                                            <div class="tech-item">Polygon</div>
-                                            <div class="tech-item">NEAR</div>
-                                            <div class="tech-item">Solana</div>
-                                            <div class="tech-item">Avalanche</div>
-                                            <div class="tech-item">Arbitrum</div>
-                                            <div class="tech-item">Optimism</div>
-                                            <div class="tech-item">Aurora</div>
-                                            <div class="tech-item">Aptos</div>
-                                            <div class="tech-item">Sui</div>
-                                            <div class="tech-item">TON</div>
-                                            <div class="tech-item">Polkadot</div>
-                                            <div class="tech-item">Cosmos</div>
-                                            <div class="tech-item">Secret Network</div>
-                                            <div class="tech-item">StarkNet</div>
-                                        </div> 
-                                    </div>
-                                </div> 
-                            </div>
-                        </div> 
-                    </div> 
-                </div> 
-            </div>
-        </section>
-        <section class="cooperation-section section-title" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="subtitle">A short outline of</h3>
-                        <h2 class="main-title">OUR COOPERATION<br>PROCESS</h2> 
-                        <ul class="process-list">
-                            <li class="process-item">Clarifying needs & requirements</li>
-                            <li class="process-item">Creating a concept and a full strategy</li>
-                            <li class="process-item">Design & development</li>
-                            <li class="process-item">Final review & fixes</li>
-                            <li class="process-item">Product launch and support</li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
-        </section>
-        <section class="engagement-section section-title" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container"> 
-                <div class="section-header">
-                    <h3 class="section-subtitle">Our most common</h3>
-                    <h2 class="section-title">ENGAGEMENT<br>MODELS</h2>
+                  </div>
+                  <p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam.
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
                 </div>
-                <div class="models-container">
-                    <div class="model-item">
-                        <div class="model-icon">
-                            <img src="images/icon-model1.png" alt="">
-                        </div>
-                        <div class="model-content">
-                            <h3 class="model-title">Project-Based Model</h3>
-                            <p class="model-description">
-                                Get a custom platform design along with any other services you might need 
-                                (expert consultations, product design, smart contract audits, etc.) at a fixed price.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="model-item">
-                        <div class="model-icon">
-                                <img src="images/icon-model2.png" alt="">
-                        </div>
-                        <div class="model-content">
-                            <h3 class="model-title">Dedicated Development Team</h3>
-                            <p class="model-description">
-                                Get a dedicated team of blockchain developers working on your project 
-                                according to our flexible time and materials payment scheme.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
-        <section class="section-title section-portfolio" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <h3 class="subtitle">Take a look at our</h3>
-                <h2 class="main-title">Portfolio</h2>
-                <div class="projects-grid">
-                    <!-- Radiologex Card -->
-                    <div class="project-card yellow">
-                        <div class="card-header">
-                            <div class=" icon-big"><img src="images/icon-radiologex.png" alt=""></div>
-                            <h4>BLOCKCHAIN DATA HUB SOLUTION FOR R-DEE'S INTEGRATED HEALTH SUITE</h4>
-                        </div>
-                        <div class="card-footer">
-                            <div class="info-section">
-                                <h4>Service</h4>
-                                <p>Blockchain Infrastructure</p>
-                            </div>
-                            <div class="info-section">
-                                <h4>Blockchain</h4>
-                                <p>Quorum</p>
-                            </div>
-                        </div>
-                    </div> 
-                    <!-- NFT Game Development Card -->
-                    <div class="project-card white">
-                        <div class="card-header">
-                            <div class=" icon-por"><img src="images/icon-mega.png" alt=""></div>
-                            <h4>NFT GAME DEVELOPMENT - FANTASY FOOTBALL LEAGUE</h4>
-                        </div>
-                        <div class="card-footer">
-                            <div class="info-section">
-                                <h4>Service</h4>
-                                <p>Blockchain based platforms</p>
-                            </div>
-                            <div class="info-section">
-                                <h4>Blockchain</h4>
-                                <p>Polygon</p>
-                            </div>
-                        </div>
-                    </div> 
-                    <!-- Decimated Card -->
-                    <div class="project-card dark">
-                        <div class="card-header">
-                            <div class="icon-big"><img src="images/icon-decim.png" alt=""></div>
-                            <h4>DEVELOPMENT AND INTEGRATION OF PAYMENT & TRADING SYSTEMS FOR DECIMATED</h4>
-                        </div>
-                        <div class="card-footer">
-                            <div class="info-section">
-                                <h4>Service</h4>
-                                <p>Blockchain based micropayment services</p>
-                            </div>
-                            <div class="info-section">
-                                <h4>Blockchain</h4>
-                                <p>Solana</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- MOM Card -->
-                    <div class="project-card light">
-                        <div class="card-header">
-                            <div class=" icon-por"><img src="images/icon-mom.png" alt=""></div>
-                            <h4>COMPREHENSIVE DEVELOPMENT OF A MONEY MARKET PROTOCOL</h4>
-                        </div>
-                        <div class="card-footer">
-                            <div class="info-section">
-                                <h4>Service</h4>
-                                <p>Blockchain based platforms</p>
-                            </div>
-                            <div class="info-section">
-                                <h4>Blockchain</h4>
-                                <p>NEAR</p>
-                            </div>
-                        </div>
-                    </div> 
-                    <!-- Decentralized App Card -->
-                    <div class="project-card dark">
-                        <div class="card-header">
-                            <div class="icon-por"><img src="images/icon-nomo.png" alt=""></div>
-                            <h4>DECENTRALIZED APP DEVELOPMENT FOR THE CRYPTO GAME</h4>
-                        </div>
-                        <div class="card-footer">
-                            <div class="info-section">
-                                <h4>Service</h4>
-                                <p>Blockchain based platforms</p>
-                            </div>
-                            <div class="info-section">
-                                <h4>Blockchain</h4>
-                                <p>Ethereum</p>
-                            </div>
-                        </div>
-                    </div> 
-                    <!-- Kanalal Card -->
-                    <div class="project-card yellow">
-                        <div class="card-header">
-                            <div class=" icon-big"><img src="images/icon-kana.png" alt=""></div>
-                            <h4>TELEGRAM SERVICE FOR ASSET MANAGEMENT ON APTOS CHAIN</h4>
-                        </div>
-                        <div class="card-footer">
-                            <div class="info-section">
-                                <h4>Service</h4>
-                                <p>Blockchain based platforms</p>
-                            </div>
-                            <div class="info-section">
-                                <h4>Blockchain</h4>
-                                <p>Aptos</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-link"><a href="#" class="view-all-btn">VIEW ALL</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! End Testimonials -->
+    <!-- ! Start Status -->
+    <div class="status">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 box">
+            <img src="images/happy-clients.svg" alt="">
+            <span class="number" data-prog="232">0
+            </span>
+            <h4>Happy Clients</h4>
+            <p>consequuntur quae diredo</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 box">
+            <img src="images/complete-projects.svg" alt="">
+            <span class="number" data-prog="521">0
+            </span>
+            <h4>Completed Projects</h4>
+            <p>adipisci atque quia aut</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 box">
+            <img src="images/hours-support.svg" alt="">
+            <span class="number" data-prog="453">0
+            </span>
+            <h4>Hours Of Support</h4>
+            <p>aut commodi quaerat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Status -->
+    <!-- ! Start Company Logos -->
+    <div id="clients" class="clients section">
+      <div class="container">
+        <div class="clients-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+          <div class="swiper-wrapper align-items-center" id="swiper-wrapper-e8ea61044272d31ce" aria-live="off"
+            style="transform: translate3d(-1593.6px, 0px, 0px); transition-duration: 0ms;">
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group"
+              aria-label="4 / 8" style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="3"><img
+                src="images/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="5 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="4"><img src="images/client-5.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="6 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="5"><img src="images/client-6.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="7 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="6"><img src="images/client-7.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="8 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="7"><img src="images/client-8.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide" role="group" aria-label="1 / 8" style="width: 139.2px; margin-right: 60px;"
+              data-swiper-slide-index="0"><img src="images/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide" role="group" aria-label="2 / 8" style="width: 139.2px; margin-right: 60px;"
+              data-swiper-slide-index="1"><img src="images/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="3 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="2"><img src="/images/client-3.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="4 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="3"><img src="images/client-4.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="5 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="4"><img src="images/client-5.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide" role="group" aria-label="6 / 8" style="width: 139.2px; margin-right: 60px;"
+              data-swiper-slide-index="5"><img src="images/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide" role="group" aria-label="7 / 8" style="width: 139.2px; margin-right: 60px;"
+              data-swiper-slide-index="6"><img src="images/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide" role="group" aria-label="8 / 8" style="width: 139.2px; margin-right: 60px;"
+              data-swiper-slide-index="7"><img src="images/client-8.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="1 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="0"><img src="images/client-1.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="2 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="1"><img src="images/client-2.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="3 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="2"><img src="images/client-3.png"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group"
+              aria-label="4 / 8" style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="3"><img
+                src="images/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="5 / 8"
+              style="width: 139.2px; margin-right: 60px;" data-swiper-slide-index="4"><img src="images/client-5.png"
+                class="img-fluid" alt=""></div>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Company Logos -->
+    <!-- ! Start Team -->
+    <div class="team" id="team">
+      <div class="header" data-aos="fade-up" data-aos-delay="100">
+        <div class="title">Team</div>
+        <p class="para">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12 box" data-aos="fade-up">
+            <img src="images/team-1.jpg" alt="">
+            <h5>Jhone Bi</h5>
+            <p>Application Manager</p>
+            <div class="social" data-aos="fade-up" data-aos-delay="400">
+              <a href="https://github.com/GziXnine" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/1ahmed-allam/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
-        </section>
-        <section class="industries-section section-title" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <h3 class="subtitle">A brief list of the main</h3>
-                <h2 class="main-title">BLOCKCHAIN<br>INDUSTRIES WE<br>SERVE</h2> 
-                <div class="industries-grid">
-                    <div class="industry-item">
-                        <div class="industry-icon">
-                            <img src="images/icon-defi.png" alt="">
-                        </div>
-                        <span class="industry-name">DEFI</span>
-                    </div>
-
-                    <div class="industry-item">
-                        <div class="industry-icon">
-                            <img src="images/icon-decent.png" alt="">
-                        </div>
-                        <span class="industry-name">DECENTRALIZED<br>EXCHANGES</span>
-                    </div>
-
-                    <div class="industry-item">
-                        <div class="industry-icon">
-                            <img src="images/icon-trading.png" alt="">
-                        </div>
-                        <span class="industry-name">TRADING BOTS</span>
-                    </div>
-
-                    <div class="industry-item">
-                        <div class="industry-icon">
-                            <img src="images/icon-blockchain.png" alt="">
-                        </div>
-                        <span class="industry-name">BLOCKCHAINS</span>
-                    </div>
-
-                    <div class="industry-item">
-                        <div class="industry-icon">
-                            <img src="images/icon-bridges.png" alt="">
-                        </div>
-                        <span class="industry-name">BRIDGES</span>
-                    </div>
-
-                    <div class="industry-item">
-                        <div class="industry-icon">
-                            <img src="images/icon-custo.png" alt="">
-                        </div>
-                        <span class="industry-name">CUSTODIAN<br>SOLUTIONS</span>
-                    </div>
-
-                    <div class="industry-item">
-                        <div class="industry-icon">
-                            <img src="images/icon-enter.png" alt="">
-                        </div>
-                        <span class="industry-name">ENTERPRISE</span>
-                    </div>
-
-                    <div class="industry-item">
-                        <div class="industry-icon">
-                            <img src="images/icon-game.png" alt="">
-                        </div>
-                        <span class="industry-name">GAMEFI</span>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 box" data-aos="fade-up">
+            <img src="images/team-2.jpg" alt="">
+            <h5>Sani Awesome</h5>
+            <p>Social Media</p>
+            <div class="social" data-aos="fade-up" data-aos-delay="400">
+              <a href="https://github.com/GziXnine" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/1ahmed-allam/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
-        </section>
-        <section class="team-section section-title" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <h3 class="team-subtitle">Please meet the</h3>
-                <h2 class="team-title">SteeLab TEAM</h2>
-                
-                <div class="team-member">
-                    <img src="images/team.png" alt="">
-                    <div class="member-info">
-                        <div>
-                            <h3 class="member-name">Sergey Onyshchenko</h3>
-                            <p class="member-title">CEO & CO-FOUNDER</p>
-                        </div>
-                        
-                        <div class="team-links">
-                            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
-                            <a href="mailto:sergey@SteeLab.tech">sergey@SteeLab.tech</a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 box" data-aos="fade-up">
+            <img src="images/team-3.jpg" alt="">
+            <h5>Andrio Willi</h5>
+            <p>Content Writer</p>
+            <div class="social" data-aos="fade-up" data-aos-delay="400">
+              <a href="https://github.com/GziXnine" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/1ahmed-allam/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
-        </section>    
-        <section class="section-title section-partner" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <h3 class="partners-subtitle">We are proud to call them</h3>
-                <h2 class="partners-title">Our Partners</h2>
-                <div class="partner-inner">
-                    <div class="brand-slider owl-carousel"> 
-                        <div class="item"><div class="card"><img src="images/partner1.png" alt="IDEASOFT"></div></div>
-                        <div class="item"><div class="card"><img src="images/partner2.png" alt="Avalanche"></div></div>
-                        <div class="item"><div class="card"><img src="images/partner3.png" alt="Manta"></div></div>
-                        <div class="item"><div class="card"><img src="images/celo5.png" alt="Celo"></div></div> 
-                        <div class="item"><div class="card"><img src="images/partner1.png" alt="IDEASOFT"></div></div>
-                        <div class="item"><div class="card"><img src="images/partner2.png" alt="Avalanche"></div></div>
-                        <div class="item"><div class="card"><img src="images/partner3.png" alt="Manta"></div></div>
-                        <div class="item"><div class="card"><img src="images/celo5.png" alt="Celo"></div></div> 
-                    </div> 
-                </div> 
-            </div>                   
-        </section>
-        <section class="section-title blog-section" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <h3 class="blog-subtitle">Learn more about SteeLab in</h3>
-                <h2 class="blog-title">OUR BLOG</h2>
-                <div class="blog-grid">
-                    <article class="blog-card dark">
-                        <div>
-                            <span class="blog-category">Analysis</span>
-                            <h4 class="blog-card-title">Blockchain Platform Comparison: A Comprehensive Analysis</h4>
-                            <p class="blog-author">Anna Korunska</p>
-                        </div>
-                        <button class="read-more-btn">Read More</button>
-                    </article>
-                    
-                    <article class="blog-card yellow">
-                        <div>
-                            <span class="blog-category">Overview</span>
-                            <h4 class="blog-card-title">Top Web3 Trends to Watch in 2025</h4>
-                            <p class="blog-author">Anna Koshinska</p>
-                        </div>
-                        <button class="read-more-btn">Read More</button>
-                    </article>
-                    
-                    <article class="blog-card light">
-                        <div>
-                            <span class="blog-category">Overview</span>
-                            <h4 class="blog-card-title">Memecoin: Where Entertainment Meets Blockchain and Digital Art</h4>
-                            <p class="blog-author">Anna Koshinska</p>
-                        </div>
-                        <button class="read-more-btn">Read More</button>
-                    </article>
-                </div> 
-                <button class="view-all-btn">View All</button>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 box" data-aos="fade-up">
+            <img src="images/team-4.jpg" alt="">
+            <h5>Afa Jonson</h5>
+            <p>Business Manager</p>
+            <div class="social" data-aos="fade-up" data-aos-delay="400">
+              <a href="https://github.com/GziXnine" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/1ahmed-allam/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
-        </section>
-        <section class="section-title faq" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container">
-                <div class="faq-header">
-                    <h3>Find more answers in the</p>
-                    <h2>FAQ SECTION</h1>
-                </div> 
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How does SteeLab collaborate with IdeaSoft?</span>
-                            <div class="faq-icon">+</div>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                SteeLab partners with IdeaSoft to provide comprehensive blockchain solutions, combining our technical expertise with their industry knowledge to deliver innovative projects that meet specific client requirements.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do you provide blockchain project development consulting?</span>
-                            <div class="faq-icon">+</div>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                Yes, we offer comprehensive blockchain consulting services including project planning, technology selection, architecture design, and strategic guidance to ensure your blockchain project's success.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do you make custom blockchain development?</span>
-                            <div class="faq-icon">+</div>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                We specialize in custom blockchain development, creating tailored solutions that meet your specific business needs, from smart contracts to full blockchain ecosystems.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do you offer blockchain application development?</span>
-                            <div class="faq-icon">+</div>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                Yes, we develop various blockchain applications including DeFi platforms, NFT marketplaces, trading bots, decentralized exchanges, and enterprise blockchain solutions.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What blockchain technologies do you work with?</span>
-                            <div class="faq-icon">+</div>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                We work with major blockchain platforms including Ethereum, Solana, Polygon, BNB Chain, Avalanche, Near, Cosmos, Polkadot, and many others, selecting the best technology for each project.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Where is your blockchain software development company located?</span>
-                            <div class="faq-icon">+</div>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                SteeLab operates globally with distributed teams, allowing us to provide 24/7 support and work with clients worldwide while maintaining high-quality development standards.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do you provide project support & maintenance services?</span>
-                            <div class="faq-icon">+</div>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                Yes, we offer comprehensive post-launch support including maintenance, updates, security monitoring, performance optimization, and ongoing technical assistance for all our blockchain projects.
-                            </div>
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Team -->
+    <!-- ! Start FAQ's -->
+    <div class="faqs" id="faqs">
+      <div class="header" data-aos="fade-up" data-aos-delay="100">
+        <div class="title">FAQ's</div>
+        <p class="para">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-12">
+            <div class="accordion accordion-flush" id="faqlist">
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-1">
+                    <span class="num"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                    What is web domain and hosting?
+                  </button>
+                </h3>
+                <div id="faq-content-1" class="accordion-collapse collapse show" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                    consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                    ipsum
+                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                    incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    Quis
+                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+                    consequatur,
+                    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                  </div>
                 </div>
+              </div><!-- TODO Faq item-->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-2">
+                    <span class="num"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                    Which server is best for websites linux or windows?
+                  </button>
+                </h3>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                    consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                    ipsum
+                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                    incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    Quis
+                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+                    consequatur,
+                    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                  </div>
+                </div>
+              </div><!-- TODO Faq item-->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-3">
+                    <span class="num"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                    Google cloud or Amazon server which one is best and fast?
+                  </button>
+                </h3>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                    consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                    ipsum
+                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                    incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    Quis
+                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+                    consequatur,
+                    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                  </div>
+                </div>
+              </div><!-- TODO Faq item-->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-4">
+                    <span class="num"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                    Why Organic SEO is important for all businesses?
+                  </button>
+                </h3>
+                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                    consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                    ipsum
+                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                    incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    Quis
+                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+                    consequatur,
+                    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                  </div>
+                </div>
+              </div><!-- TODO Faq item-->
             </div>
+          </div>
+        </div>
         </section>
-        <section class="contact-section section-title">
-            <div class="contact-container">
-                <div class="contact-content">
-                    <h3>Talk to an expert</h3>
-                    <h2>GET IN TOUCH</h2>
-                    <p>Our team is happy to answer your questions. Fill out the form and we'll get back to you as soon as possible.</p>
+      </div>
+    </div>
+    <!-- ! End FAQ's -->
+    <!-- ! Start Discuss -->
+    <div class="discuss">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h3>Let's Discuss your Projects</h3>
+        <p>We pride ourselves with our ability to perform and deliver results. Use the form below to discuss your
+          project needs
+          with our team, we will get back asap</p>
+        <button type="submit" class="btn btn-primary rounded-pill">Contact Us</button>
+      </div>
+    </div>
+    <!-- ! End Discuss -->
+    <!-- ! Start Blogs -->
+    <div class="blogs" id="blogs">
+      <div class="header" data-aos="fade-up" data-aos-delay="100">
+        <div class="title">Blogs</div>
+        <p class="para">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+              <div class="box">
+                <img src="images/blog-1.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <p>Domain & Hosting</p>
+                <p class="card-text">How to host website on any hosting provider?
+                </p>
+                <p>William Bla</p>
+                <p>Feb 1, 2022</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+              <div class="box">
+                <img src="images/blog-2.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <p>Advertisement</p>
+                <p class="card-text">How to create add on google adwords?
+                </p>
+                <p>Jobi Ret</p>
+                <p>Oct 5, 2022</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card" data-aos="fade-up" data-aos-delay="600">
+              <div class="box">
+                <img src="images/blog-3.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <p>Marketing</p>
+                <p class="card-text">What is digital marketing and why is important?
+                </p>
+                <p>Main Dow</p>
+                <p>Dec 22, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Blogs -->
+    <!-- ! Start Contact Us -->
+    <div class="contact-us" id="contact-us">
+      <div class="header" data-aos="fade-up" data-aos-delay="100">
+        <div class="title">Contact Us</div>
+        <p class="para">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12" data-aos="fade-up" data-aos-delay="400">
+            <div class="address">
+              <h5>Address:</h5>
+              <p class="text-black-50 fw-normal" style="font-size: 15px; margin-bottom: 30px;">11 West Town<br>PBo
+                12345,
+                United States</p>
+            </div>
+            <div class="phone">
+              <h5>Phone:</h5>
+              <p class="text-black-50 fw-normal" style="font-size: 15px; margin-bottom: 30px;">+1 1234 56 780<br>+1
+                1234
+                56 780</p>
+            </div>
+            <div class="email">
+              <h5>Email:</h5>
+              <p class="text-black-50 fw-normal" style="font-size: 15px; margin-bottom: 30px;">
+                info@example.com<br>email@example.com</p>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <form id="contact-form">
+              <div class="row">
+                <!-- ! Username Field -->
+                <div class="col-lg-6 col-sm-12 mb-3" data-aos="fade-up" data-aos-delay="100">
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <div class="form-floating flex-grow-1">
+                      <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username" required>
+                      <label for="floatingInputGroup1">Username</label>
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Enter Your Username.
+                    </div>
+                  </div>
                 </div>
-                
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Name" required>
+                <!-- ! Email Field -->
+                <div class="col-lg-6 col-sm-12 mb-3" data-aos="fade-up" data-aos-delay="400">
+                  <div class="input-group has-validation">
+                    <div class="form-floating flex-grow-1">
+                      <input type="email" class="form-control" id="floatingInputGroup2" placeholder="Email" required>
+                      <label for="floatingInputGroup2">Email</label>
                     </div>
-                    
-                    <div class="form-group">
-                        <input type="email" placeholder="Email address" required>
+                    <div class="invalid-feedback">
+                      Please Enter Your Email.
                     </div>
-                    
-                    <div class="form-group">
-                        <textarea placeholder="Message" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="text" placeholder="Additional method of contact">
-                    </div>
-                    
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="terms" required>
-                        <label for="terms">
-                            I agree with <a href="#">Terms & Conditions</a>. 
-                            This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> 
-                            and <a href="#">Terms of Service</a> apply.
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">SEND</button>
+                  </div>
+                </div>
+                <!-- ! Subject Field -->
+                <div class="form-floating col-lg-12 mb-3 flex-grow-1" data-aos="fade-up" data-aos-delay="800">
+                  <input type="text" class="form-control" id="floatingSubject" placeholder="Subject" required>
+                  <label for="floatingSubject" class="ps-4">Subject</label>
+                </div>
+                <!-- ! Comments Field -->
+                <div class="col-lg-12 mb-3" data-aos="fade-up" data-aos-delay="1000">
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                      style="height: 200px" required></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                  </div>
+                </div>
+                <!-- ! Submit Button -->
+                <div class="col-lg-8 col-md-12" data-aos="fade-up" data-aos-delay="1200">
+                  <button type="submit" class="btn btn-primary rounded-pill">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! End Contact Us -->
+  </main>
+  <!-- ! Start Footer -->
+  <footer id="footer" class="footer-section">
+    <div class="container">
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <img src="images/logo.png" alt="logo">
+                </a>
+              </div>
+              <div class="footer-text">
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec
+                  tetur adipisicing
+                  elit,Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span><a href="https://github.com/GziXnine" target="_blank"><i
+                    class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/1ahmed-allam/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+            <div class="service-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Services</h3>
+              </div>
+              <ul class="list">
+                <li><a href="services.html">Web Design</a></li>
+                <li><a href="services.html">App Developemnt</a></li>
+                <li><a href="services.html">Cloud Services</a></li>
+                <li><a href="services.html">Domain adn Hosting</a></li>
+                <li><a href="services.html">Seo Optimization</a></li>
+                <li><a href="services.html">Social Media</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+            <div class="service-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Information</h3>
+              </div>
+              <ul class="list">
+                <li><a href="about.html">About</a></li>
+                <li><a href="packages.html">Pricing</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="protofolio.html">Portfolio</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="blog-details.html">Blog Details</a></li>
+                <li><a href="coming-soon.html">Coming Soon</a></li>
+                <li><a href="privacy-policy.html">Terms &amp; Conditions</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="contact-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Contacts</h3>
+              </div>
+              <div class="footer-text">
+                <p><i class="fa-solid fa-location-dot"></i> 101 West Town , PBO 12345, United States</p>
+                <p><i class="fa-solid fa-phone"></i></i> +1 1234 56 789</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
+              </div>
+            </div>
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Newsletter</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#" id="email-form">
+                  <input type="text" placeholder="Email Address" id="email-input">
+                  <button id="submit-button">
+                    <i class="fa-brands fa-telegram"></i>
+                  </button>
                 </form>
+              </div>
             </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo"><img src="images/footer-logo.png" alt=""></div>
-                    <p>SteeLab is a Web3 software development company deeply committed to blockchain technology.</p>
-                    <p>Through our listings, partnerships with blockchain, we combine expertise to create impactful solutions for our clients.</p>
-                </div>
-                <div class="footer-mid">
-                    <div class="footer-contact">
-                        <div class="footer-section">
-                            <h4>Contact Us</h4>
-                            <ul>
-                                <li><a href="mailto:contact@SteeLab.tech">Email: </br>contact@steelab.tech</a></li>
-                            </ul>
-                            <div class="footer-section footer-social">
-                                <h4>Socials</h4>
-                                <div class="social-links">
-                                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-
-                                    <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-
-                                    <a href="https://medium.com" target="_blank"><i class="fab fa-medium"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-section">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li><a href="#">Cases</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Whitepaper</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Vacancies</a></li>
-                        </ul>
-                    </div> 
-                    <div class="footer-section">
-                        <h4>Technologies</h4>
-                        <ul>
-                            <li><a href="#">Web3 Development Services</a></li>
-                            <li><a href="#">Blockchain Development Services</a></li>
-                            <li><a href="#">Security Audit Services</a></li>
-                            <li><a href="#">Blockchain Integration</a></li>
-                            <li><a href="#">Fundraising</a></li>
-                            <li><a href="#">Blockchain Bridge Development</a></li>
-                            <li><a href="#">Cross-chain Solutions</a></li>
-                            <li><a href="#">Development</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Solutions</h4>
-                        <ul>
-                            <li><a href="#">dApp Development</a></li>
-                            <li><a href="#">DeFi Development Services</a></li>
-                            <li><a href="#">DEX Development Services</a></li>
-                            <li><a href="#">Smart Contract Development</a></li>
-                            <li><a href="#">Asset Management Platform</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Asset Tokenization</a></li>
-                            <li><a href="#">Token Development Services</a></li>
-                            <li><a href="#">TON Blockchain Development</a></li>
-                            <li><a href="#">Blockchain Game Development</a></li>
-                            <li><a href="#">NFT Marketplace Development</a></li>
-                            <li><a href="#">NFT Development Services</a></li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-bottom-content">
-                        <div class="trust-section">
-                            <div class="clutch-badge">
-                            <span class="clutch-text">REVIEWED ON</span>
-                            <span class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-                            <br>
-                            <span class="clutch-logo">Clutch</span>
-                            <span class="review-count">5 REVIEWS</span>
-                            </div>
-
-                                <div class="cert-badge">
-                                    <a href=""><img src="images/blockchain1.png" alt=""></a>
-                                </div>
-                                
-                                <div class="cert-badge">
-                                    <a href=""><img src="images/blockchain2.png" alt=""></a>
-                                </div>
-                                
-                                <div class="cert-badge">
-                                    <a href=""><img src="images/blockchain3.png" alt=""></a>
-                                </div>
-                                <div class="cert-badge">
-                                    <a href=""><img src="images/blockchain4.png" alt=""></a>
-                                </div>
-                                <div class="cert-badge">
-                                    <a href=""><img src="images/blockchain5.png" alt=""></a>
-                                </div> 
-                        </div> 
-                        <div class="legal-section">
-                            <div class="copyright">
-                                Copyright © SteeLab - blockchain development company 2018-2023
-                            </div>
-                            <div class="legal-links">
-                                <a href="#privacy">Privacy Policy</a>
-                                <span>|</span>
-                                <a href="#terms">Terms & Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+            <div class="copyright-text">
+              <p>&copy; 2024 <a href="https://github.com/GziXnine" target="_blank"><span>Allam</span></a> All Right
+                Reserved
+              </p>
             </div>
+          </div>
         </div>
-    </footer> 
+      </div>
+    </div>
+  </footer>
+  <!-- ! End Footer -->
+  <!-- ! Start Scroll Button -->
+  <!-- TODO:-  -->
+  <a id="top" style="right: 20px;" href="#">
+    <i class="top fas fa-chevron-up"></i>
+  </a>
+  <!-- ! End Scroll Button -->
+  <!---------------------------------------------------------------------------->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- ! This Render Icon As SVG... -->
+  <script src="js/all.min.js"></script>
+  <!-- ! JavaScript File -->
+  <script src="js/main.js"></script>
+  <script src="js/landing.js"></script>
+  <script src="js/aos.js"></script>
 </body>
-<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/owl.carousel.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script type="text/javascript" src="js/common.js"></script> 
+
 </html>
