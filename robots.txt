@@ -1,0 +1,41 @@
+# robots.txt for steelab.tech
+# Blockchain Outsourcing Company
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://steelab.tech/sitemap.xml
+
+# Allow all search engines to crawl
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow crawling of admin and private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /.git/
+
+# Allow crawling of CSS, JS, and images for better SEO
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+
+# Crawl-delay (optional - helps prevent overloading server)
+Crawl-delay: 1
+
+# Host directive
+Host: https://steelab.tech
