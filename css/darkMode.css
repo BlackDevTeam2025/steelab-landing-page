@@ -72,6 +72,23 @@ header.bg-dark .navbar-collapse ul li.dropdown ul {
   border: 2px solid black;
 }
 
+/* Portfolio Swiper Dark Mode Styles - Keep colorful themes in dark mode */
+.protofolio.bg-dark .client-block {
+  /* Keep the colorful gradients in dark mode for visual appeal */
+}
+
+.protofolio.bg-dark .client-block:not([class*="-theme"]) {
+  background-color: #2d3748;
+  color: white;
+  border: 1px solid #4a5568;
+}
+
+.protofolio.bg-dark .portfolio-swiper .swiper-button-next,
+.protofolio.bg-dark .portfolio-swiper .swiper-button-prev {
+  background: rgba(45, 55, 72, 0.9);
+  color: #74B9FF;
+}
+
 .pricing {
   background-color: white !important;
 }

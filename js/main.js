@@ -327,6 +327,45 @@ var swiper = new Swiper(".swiper", {
   },
 });
 
+// ! Initialize Portfolio Swiper
+var portfolioSwiper = new Swiper(".portfolio-swiper", {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    1: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+  },
+});
+
 // ! Making Scroll To Top Button Visible
 const btn = document.getElementById("top");
 window.addEventListener("scroll", () => {

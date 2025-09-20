@@ -140,7 +140,7 @@
     <!-- ! Start Navbar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/">
           <img src="images/logo.png" alt="SteeLab" class="img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -152,7 +152,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="services.html">Services</a>
@@ -327,60 +327,182 @@
         <div class="title">Our Portfolio</div>
         <p class="para">Transforming Industries with Revolutionary Blockchain Solutions</p>
       </div>
-      <div class="container" data-aos="fade-up" data-portfolio-filter="*" data-portfolio-layout="masonry"
-        data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
-        <div class="buttons">
-          <button type="button" data-cat="all" class="btn btn-primary rounded-5 rounded-end active">All</button>
-          <button type="button" data-cat="app-des" class="btn btn-primary rounded-0">DeFi</button>
-          <button type="button" data-cat="app-dev" class="btn btn-primary rounded-0">NFT</button>
-          <button type="button" data-cat="brand" class="btn btn-primary rounded-0">Web3</button>
-          <button type="button" data-cat="it-sol" class="btn btn-primary rounded-5 rounded-start">Trading</button>
-        </div>
-        <div class="photos">
-          <div class="container">
-            <div class="photo all app-des" data-aos="fade-up" data-aos-delay="100" title="SolariusPro - Advanced DeFi Trading Platform on Solana">
-              <img src="images/product-1.jpg" alt="SolariusPro DeFi Platform">
-              <div class="overlay-content">
-                <h4>SolariusPro</h4>
-                <p>AI-powered DeFi trading platform built on Solana with automated yield farming, liquidity provision, and advanced trading algorithms. Features include real-time market analysis, risk management tools, and seamless wallet integration.</p>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper portfolio-swiper">
+          <div class="swiper-wrapper">
+            <!-- Project 1: R-dee's Integrated Health IT Suite -->
+            <div class="swiper-slide">
+              <div class="client-block red-theme">
+                <div class="project-header">
+                  <div class="project-logo">
+                    <img src="images/client-logos/rdee-logo.png" alt="R-dee Logo" class="client-logo">
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Blockchain Data Hub Solution</h3>
+                    <h4 class="client-name">R-dee's Integrated Health IT Suite</h4>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="service-info">
+                    <span class="service-label">Service:</span>
+                    <span class="service-value">Healthcare Blockchain Integration</span>
+                  </div>
+                  <div class="blockchain-info">
+                    <span class="blockchain-label">Blockchain:</span>
+                    <span class="blockchain-value">Quorum</span>
+                  </div>
+                </div>
+                <div class="project-link">
+                  <a href="#" class="view-project-btn">View Project</a>
+                </div>
               </div>
             </div>
-            <div class="photo all app-dev" data-aos="fade-up" data-aos-delay="200" title="CryptoArts Marketplace - Premium NFT Platform">
-              <img src="images/product-2.jpg" alt="CryptoArts NFT Marketplace">
-              <div class="overlay-content">
-                <h4>CryptoArts Marketplace</h4>
-                <p>Premium NFT marketplace supporting multi-chain assets with advanced minting capabilities, royalty distribution, and social features. Includes creator verification, auction systems, and integrated marketplace analytics for collectors and artists.</p>
+
+            <!-- Project 2: Fantasy Football League NFT Game -->
+            <div class="swiper-slide">
+              <div class="client-block gray-theme">
+                <div class="project-header">
+                  <div class="project-logo">
+                    <img src="images/client-logos/fantasy-football-logo.png" alt="Fantasy Football Logo" class="client-logo">
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">NFT Game Development</h3>
+                    <h4 class="client-name">Fantasy Football League</h4>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="service-info">
+                    <span class="service-label">Service:</span>
+                    <span class="service-value">NFT Gaming Platform</span>
+                  </div>
+                  <div class="blockchain-info">
+                    <span class="blockchain-label">Blockchain:</span>
+                    <span class="blockchain-value">Polygon</span>
+                  </div>
+                </div>
+                <div class="project-link">
+                  <a href="#" class="view-project-btn">View Project</a>
+                </div>
               </div>
             </div>
-            <div class="photo all brand" data-aos="fade-up" data-aos-delay="400" title="ChainPay Gateway - Crypto Payment Solution">
-              <img src="images/product-3.jpg" alt="ChainPay Crypto Gateway">
-              <div class="overlay-content">
-                <h4>ChainPay Gateway</h4>
-                <p>Modern cryptocurrency payment gateway enabling businesses to accept multiple digital currencies. Features instant settlements, automatic conversion, fraud protection, and comprehensive merchant dashboard with real-time transaction monitoring.</p>
+
+            <!-- Project 3: Decimated Payment & Trading Systems -->
+            <div class="swiper-slide">
+              <div class="client-block dark-theme">
+                <div class="project-header">
+                  <div class="project-logo">
+                    <img src="images/client-logos/decimated-logo.png" alt="Decimated Logo" class="client-logo">
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Payment & Trading Systems</h3>
+                    <h4 class="client-name">Decimated</h4>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="service-info">
+                    <span class="service-label">Service:</span>
+                    <span class="service-value">Payment Gateway Integration</span>
+                  </div>
+                  <div class="blockchain-info">
+                    <span class="blockchain-label">Blockchain:</span>
+                    <span class="blockchain-value">Solana</span>
+                  </div>
+                </div>
+                <div class="project-link">
+                  <a href="#" class="view-project-btn">View Project</a>
+                </div>
               </div>
             </div>
-            <div class="photo all it-sol" data-aos="fade-up" data-aos-delay="100" title="TradeSync Pro - Copy Trading Platform">
-              <img src="images/product-4.jpg" alt="TradeSync Copy Trading">
-              <div class="overlay-content">
-                <h4>TradeSync Pro</h4>
-                <p>Decentralized copy trading platform for perpetual futures with social trading features. Allows users to follow successful traders, automate portfolio replication, and access advanced risk management tools across multiple DEXs.</p>
+
+            <!-- Project 4: Money Market Protocol -->
+            <div class="swiper-slide">
+              <div class="client-block white-theme">
+                <div class="project-header">
+                  <div class="project-logo">
+                    <img src="images/client-logos/defi-protocol-logo.png" alt="DeFi Protocol Logo" class="client-logo">
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Money Market Protocol</h3>
+                    <h4 class="client-name">Comprehensive DeFi Platform</h4>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="service-info">
+                    <span class="service-label">Service:</span>
+                    <span class="service-value">DeFi Protocol Development</span>
+                  </div>
+                  <div class="blockchain-info">
+                    <span class="blockchain-label">Blockchain:</span>
+                    <span class="blockchain-value">NEAR</span>
+                  </div>
+                </div>
+                <div class="project-link">
+                  <a href="#" class="view-project-btn">View Project</a>
+                </div>
               </div>
             </div>
-            <div class="photo all app-des" data-aos="fade-up" data-aos-delay="200" title="MediChain - Healthcare Blockchain Platform">
-              <img src="images/product-5.jpg" alt="MediChain Healthcare Platform">
-              <div class="overlay-content">
-                <h4>MediChain</h4>
-                <p>Blockchain-based healthcare platform for secure patient data management and medical record verification. Includes telemedicine integration, insurance claim automation, and HIPAA-compliant smart contracts for healthcare providers.</p>
+
+            <!-- Project 5: Crypto Game dApp -->
+            <div class="swiper-slide">
+              <div class="client-block red-theme">
+                <div class="project-header">
+                  <div class="project-logo">
+                    <img src="images/client-logos/crypto-game-logo.png" alt="Crypto Game Logo" class="client-logo">
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Decentralized App Development</h3>
+                    <h4 class="client-name">The Crypto Game</h4>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="service-info">
+                    <span class="service-label">Service:</span>
+                    <span class="service-value">Gaming dApp Platform</span>
+                  </div>
+                  <div class="blockchain-info">
+                    <span class="blockchain-label">Blockchain:</span>
+                    <span class="blockchain-value">Ethereum</span>
+                  </div>
+                </div>
+                <div class="project-link">
+                  <a href="#" class="view-project-btn">View Project</a>
+                </div>
               </div>
             </div>
-            <div class="photo all brand" data-aos="fade-up" data-aos-delay="500" title="LogiFlow - Supply Chain Management">
-              <img src="images/product-6.jpg" alt="LogiFlow Supply Chain">
-              <div class="overlay-content">
-                <h4>LogiFlow</h4>
-                <p>Enterprise blockchain solution for freight procurement and supply chain transparency. Features IoT integration, automated smart contracts for logistics, real-time tracking, and sustainability metrics for global shipping operations.</p>
+
+            <!-- Project 6: Telegram Service for Aptos Chain -->
+            <div class="swiper-slide">
+              <div class="client-block gray-theme">
+                <div class="project-header">
+                  <div class="project-logo">
+                    <img src="images/client-logos/aptos-service-logo.png" alt="Aptos Service Logo" class="client-logo">
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Telegram Service for Asset Management</h3>
+                    <h4 class="client-name">Aptos Chain Integration</h4>
+                  </div>
+                </div>
+                <div class="project-details">
+                  <div class="service-info">
+                    <span class="service-label">Service:</span>
+                    <span class="service-value">Telegram Bot & Asset Management</span>
+                  </div>
+                  <div class="blockchain-info">
+                    <span class="blockchain-label">Blockchain:</span>
+                    <span class="blockchain-value">Aptos</span>
+                  </div>
+                </div>
+                <div class="project-link">
+                  <a href="#" class="view-project-btn">View Project</a>
+                </div>
               </div>
             </div>
           </div>
+          <!-- Swiper pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Swiper navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </div>
