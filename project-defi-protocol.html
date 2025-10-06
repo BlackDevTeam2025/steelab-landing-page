@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Money Market Protocol | SteeLab DeFi Case Study</title>
+  <meta name="description" content="Learn how SteeLab built a comprehensive money market DeFi protocol on NEAR blockchain with advanced lending and borrowing features.">
+  <meta name="keywords" content="DeFi protocol, NEAR blockchain, money market, lending protocol, SteeLab portfolio">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/microchip-solid.svg" type="image/svg+xml">
+
+  <!-- Font Awesome Library -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Main Template CSS File -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/singlePage.css">
+  <link rel="stylesheet" href="css/darkMode.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <!-- ! Start Header -->
+  <header class="d-flex align-items-center fixed-top justify-content-around bg-transparent">
+    <!-- ! Start Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="SteeLab" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span>
+            <i class="fa-solid fa-sliders"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="protofolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">News</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-primary rounded-pill get-quotes"><a href="contact.html">Get
+              Quotes</a></button>
+          <button id="darkmode-button" class="btn rounded-circle">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- ! End Navbar -->
+  </header>
+  <!-- ! End Header -->
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs sticked-header-offset">
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 data-aos="fade-up" data-aos-delay="300">Comprehensive DeFi Money Market Protocol</h2>
+            <p data-aos="fade-up" data-aos-delay="400">Advanced Lending & Borrowing Platform on NEAR Blockchain</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="700">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="protofolio.html">Portfolio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Money Market Protocol</li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ! Start Project Details -->
+  <section class="blog-details">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="project-header-info mb-4">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>Client</h5>
+                <p>DeFi Protocol Foundation</p>
+              </div>
+              <div class="col-md-4">
+                <h5>Blockchain</h5>
+                <p>NEAR Protocol</p>
+              </div>
+              <div class="col-md-4">
+                <h5>Service</h5>
+                <p>DeFi Protocol Development</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <img src="images/client-logos/defi-protocol-logo.png" class="img-fluid rounded-4 mb-4" alt="DeFi Protocol">
+          </div>
+
+          <h3>Project Overview</h3>
+          <p>
+            SteeLab developed a comprehensive money market protocol on NEAR blockchain, enabling users to lend, borrow, and earn interest on cryptocurrency assets. The platform combines algorithmic interest rate models, cross-collateralization, and advanced risk management to create a sustainable DeFi ecosystem.
+          </p>
+
+          <h3>The Challenge</h3>
+          <p>
+            Building a secure and efficient money market required addressing critical DeFi challenges:
+          </p>
+          <ul>
+            <li>Designing sustainable interest rate models that balance supply and demand</li>
+            <li>Implementing robust liquidation mechanisms to prevent systemic risk</li>
+            <li>Creating gas-efficient smart contracts for high-frequency operations</li>
+            <li>Building accurate price oracles with manipulation resistance</li>
+            <li>Ensuring protocol solvency during market volatility</li>
+            <li>Developing user-friendly interfaces for complex DeFi operations</li>
+            <li>Implementing governance for decentralized protocol upgrades</li>
+          </ul>
+
+          <h3>Our Solution</h3>
+          <p>
+            SteeLab delivered a battle-tested DeFi protocol with institutional-grade features:
+          </p>
+          <ul>
+            <li><strong>Algorithmic Interest Rates:</strong> Implemented dynamic rate curves based on utilization ratios and market conditions</li>
+            <li><strong>Multi-Asset Collateral:</strong> Developed cross-collateralization system supporting 20+ digital assets</li>
+            <li><strong>Automated Liquidation:</strong> Created efficient liquidation engine with keeper incentives</li>
+            <li><strong>Oracle Integration:</strong> Implemented Pyth Network and Chainlink price feeds with failover mechanisms</li>
+            <li><strong>Flash Loan Protection:</strong> Built safeguards against flash loan attacks and price manipulation</li>
+            <li><strong>Yield Optimization:</strong> Developed auto-compounding strategies for lenders</li>
+            <li><strong>DAO Governance:</strong> Implemented on-chain voting for protocol parameters and upgrades</li>
+          </ul>
+
+          <h3>Technical Implementation</h3>
+          <p>
+            The protocol leverages NEAR's performance and developer-friendly features:
+          </p>
+          <ul>
+            <li>Rust smart contracts optimized for NEAR Protocol</li>
+            <li>Compound-style interest accrual with per-block calculations</li>
+            <li>ERC-4626 tokenized vault standard for lending positions</li>
+            <li>Multi-signature treasury with timelock controls</li>
+            <li>Subgraph indexing for real-time protocol analytics</li>
+            <li>React/Next.js frontend with Web3 wallet integration</li>
+            <li>Automated testing suite with Hardhat and Foundry</li>
+            <li>Comprehensive monitoring with Defender and OpenZeppelin</li>
+          </ul>
+
+          <h3>Results & Impact</h3>
+          <p>
+            The money market protocol achieved remarkable growth and stability:
+          </p>
+          <ul>
+            <li>$150M+ Total Value Locked (TVL) within 6 months</li>
+            <li>25,000+ active users across 45 countries</li>
+            <li>$500M+ in cumulative lending volume</li>
+            <li>Average APY of 8-15% for lenders</li>
+            <li>Zero protocol exploits or security breaches</li>
+            <li>99.9% liquidation success rate during market crashes</li>
+            <li>Listed on CoinGecko and DeFi Llama top protocols</li>
+          </ul>
+
+          <h3>Key Features Delivered</h3>
+          <ul>
+            <li>Supply and earn interest on 20+ supported assets</li>
+            <li>Borrow against collateral with flexible LTV ratios</li>
+            <li>Isolated lending pools for risk segregation</li>
+            <li>Flash loans for arbitrage and liquidation bots</li>
+            <li>Liquidation protection with health factor monitoring</li>
+            <li>One-click leverage strategies (up to 5x)</li>
+            <li>Real-time analytics dashboard with APY tracking</li>
+            <li>Mobile-responsive dApp with MetaMask integration</li>
+          </ul>
+
+          <h3>Risk Management</h3>
+          <ul>
+            <li><strong>Collateral Factors:</strong> Conservative LTV ratios (60-75%) based on asset volatility</li>
+            <li><strong>Liquidation Incentives:</strong> 8% bonus for liquidators to ensure timely debt repayment</li>
+            <li><strong>Reserve Factor:</strong> 10% protocol fee allocated to insurance fund</li>
+            <li><strong>Interest Rate Caps:</strong> Maximum borrow rates to prevent excessive leverage</li>
+            <li><strong>Oracle Security:</strong> Multiple price sources with median aggregation</li>
+          </ul>
+
+          <h3>Security Measures</h3>
+          <ul>
+            <li>Audited by CertiK, Quantstamp, and PeckShield</li>
+            <li>$1M bug bounty program on Immunefi</li>
+            <li>Formal verification of core protocol logic</li>
+            <li>Emergency pause mechanism for critical situations</li>
+            <li>Timelock delays for governance proposals (48 hours)</li>
+            <li>Regular penetration testing and security reviews</li>
+          </ul>
+
+          <h3>Client Testimonial</h3>
+          <blockquote class="blockquote">
+            <p class="mb-0">"SteeLab exceeded our expectations in every aspect. The money market protocol they built is not only technically sophisticated but also battle-tested through multiple market cycles. Their expertise in DeFi architecture and risk management was instrumental in creating a protocol that users trust with their assets."</p>
+            <footer class="blockquote-footer mt-2">Alexandra Moore, <cite title="Source Title">Head of Protocol Development</cite></footer>
+          </blockquote>
+
+          <div class="d-flex justify-content-between mt-5">
+            <a href="protofolio.html" class="btn btn-primary rounded-pill get-quotes">Back to Portfolio</a>
+            <a href="contact.html" class="btn btn-primary rounded-pill get-quotes">Start Your Project</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="blog-sidbar">
+            <h3>Project Highlights</h3>
+            <div class="project-stats mb-4">
+              <div class="stat-item mb-3">
+                <h4>$150M+</h4>
+                <p>Total Value Locked</p>
+              </div>
+              <div class="stat-item mb-3">
+                <h4>25K+</h4>
+                <p>Active Users</p>
+              </div>
+              <div class="stat-item mb-3">
+                <h4>8-15%</h4>
+                <p>Average APY</p>
+              </div>
+              <div class="stat-item mb-3">
+                <h4>99.9%</h4>
+                <p>Liquidation Success</p>
+              </div>
+            </div>
+
+            <hr>
+            <h3>Technologies Used</h3>
+            <ul>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> NEAR Protocol</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> Rust Smart Contracts</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> Pyth & Chainlink Oracles</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> ERC-4626 Standard</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> Next.js Frontend</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> The Graph Protocol</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> OpenZeppelin Defender</li>
+            </ul>
+
+            <hr>
+            <h3>Related Projects</h3>
+            <ul>
+              <li><a href="project-decimated.html"><i class="fa-solid fa-circle-arrow-right"></i> Decimated Payment System</a></li>
+              <li><a href="project-crypto-game.html"><i class="fa-solid fa-circle-arrow-right"></i> The Crypto Game dApp</a></li>
+              <li><a href="project-rdee-health.html"><i class="fa-solid fa-circle-arrow-right"></i> R-dee's Health IT Suite</a></li>
+            </ul>
+
+            <hr>
+            <h3>Industry</h3>
+            <ul>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> Decentralized Finance</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> Lending & Borrowing</li>
+              <li><i class="fa-solid fa-circle-arrow-right"></i> Money Markets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ! End Project Details -->
+
+  <!-- ! Start Footer -->
+  <footer id="footer" class="footer-section">
+    <div class="container">
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <img src="images/logo.png" alt="logo">
+                </a>
+              </div>
+              <div class="footer-text">
+                <p>SteeLab is a pioneering blockchain outsourcing company specializing in Web3 development, smart contracts, and decentralized applications.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="https://github.com/steelab" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/steelab" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/steelab" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/steelab" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+            <div class="service-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Services</h3>
+              </div>
+              <ul class="list">
+                <li><a href="services.html">Smart Contracts</a></li>
+                <li><a href="services.html">DeFi Development</a></li>
+                <li><a href="services.html">NFT Platforms</a></li>
+                <li><a href="services.html">Blockchain Consulting</a></li>
+                <li><a href="services.html">Web3 Applications</a></li>
+                <li><a href="services.html">Token Development</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+            <div class="service-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Information</h3>
+              </div>
+              <ul class="list">
+                <li><a href="about.html">About</a></li>
+                <li><a href="packages.html">Pricing</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="protofolio.html">Portfolio</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="contact-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Contacts</h3>
+              </div>
+              <div class="footer-text">
+                <p><i class="fa-solid fa-location-dot"></i> 158 Ba Đinh Ha Noi Viet Nam</p>
+                <p><i class="fa-solid fa-phone"></i> +84968667361</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@steellabs.tech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ! End Footer -->
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/aos.js"></script>
+</body>
+
+</html>

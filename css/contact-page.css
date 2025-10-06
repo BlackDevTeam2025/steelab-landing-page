@@ -1,0 +1,388 @@
+/* Contact Page Custom Styles */
+
+/* Section Header */
+.contact-us .section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.contact-us .section-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Contact Cards */
+.contact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 2px solid transparent;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color, #6366f1);
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 32px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.contact-card h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.contact-card p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.contact-card a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.contact-card a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Telegram CTA Section */
+.telegram-cta {
+  background: linear-gradient(135deg, #0088cc 0%, #005f99 100%);
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 10px 40px rgba(0, 136, 204, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.telegram-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.telegram-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.telegram-icon-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.telegram-text h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.telegram-text p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.telegram-button {
+  background: #fff;
+  color: #0088cc;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.telegram-button:hover {
+  background: #f0f9ff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  color: #005f99;
+}
+
+.telegram-button i {
+  transition: transform 0.3s ease;
+}
+
+.telegram-button:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive Telegram CTA */
+@media (max-width: 992px) {
+  .telegram-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+
+  .telegram-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .telegram-text h3 {
+    font-size: 24px;
+  }
+}
+
+/* QR Code Section */
+.qr-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.qr-code-wrapper {
+  text-align: center;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.qr-label {
+  background: #0088cc;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qr-description h4 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.qr-description p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+@media (max-width: 992px) {
+  .qr-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+
+  .qr-description p {
+    margin: 0 auto;
+  }
+}
+
+/* Social Links Grid */
+.social-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.social-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.social-link-card {
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link-card i {
+  font-size: 36px;
+  color: #667eea;
+  transition: all 0.3s ease;
+}
+
+.social-link-card span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.social-link-card:hover {
+  border-color: #667eea;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.social-link-card:hover i {
+  transform: scale(1.2);
+  color: #764ba2;
+}
+
+/* Business Hours */
+.business-hours {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.business-hours h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.business-hours h4 i {
+  color: #667eea;
+}
+
+.hours-grid {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.hour-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.hour-item .day {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 16px;
+}
+
+.hour-item .time {
+  color: #666;
+  font-size: 15px;
+}
+
+.response-note {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 20px 0 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.response-note i {
+  font-size: 18px;
+}
+
+/* Spacing */
+.contact-us {
+  padding: 80px 0;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.telegram-icon-wrapper {
+  animation: pulse 2s ease-in-out infinite;
+}
