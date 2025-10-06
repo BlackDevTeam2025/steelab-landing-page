@@ -49,52 +49,217 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- Structured Data (JSON-LD) -->
+  <!-- Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://steelab.tech/#organization",
     "name": "SteeLab",
+    "alternateName": "SteeLab Vietnam",
     "url": "https://steelab.tech",
-    "logo": "https://steelab.tech/images/logo.png",
-    "description": "Leading blockchain outsourcing company specializing in Web3 development, smart contracts, and DeFi solutions",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://steelab.tech/images/logo.png",
+      "width": 600,
+      "height": 60
+    },
+    "description": "SteeLab là công ty phát triển blockchain hàng đầu Việt Nam, chuyên về Web3, smart contracts, DeFi, và NFT. Đội ngũ chuyên gia giàu kinh nghiệm cung cấp giải pháp blockchain tiên tiến cho doanh nghiệp toàn cầu.",
     "foundingDate": "2020",
     "sameAs": [
       "https://www.linkedin.com/company/steelab",
       "https://github.com/steelab",
-      "https://twitter.com/steelab"
+      "https://twitter.com/steelab",
+      "https://www.facebook.com/steelab"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+84968667361",
       "contactType": "customer service",
-      "availableLanguage": "English"
+      "availableLanguage": ["Vietnamese", "English"],
+      "email": "contact@steellabs.tech"
     },
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "158 Ba Đinh",
+      "addressLocality": "Ha Noi",
       "addressCountry": "VN"
     },
-    "service": [
+    "knowsAbout": [
+      "Web3 Development",
+      "Blockchain Technology",
+      "Smart Contracts",
+      "DeFi Development",
+      "NFT Development",
+      "Cryptocurrency",
+      "Decentralized Applications",
+      "Solana Development"
+    ],
+    "slogan": "Delivering Superior Blockchain Outsourcing Solutions"
+  }
+  </script>
+
+  <!-- WebSite Schema with SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://steelab.tech/#website",
+    "url": "https://steelab.tech",
+    "name": "SteeLab - Blockchain Outsourcing Company",
+    "description": "Leading blockchain outsourcing company specializing in Web3 development, smart contracts, and DeFi solutions",
+    "publisher": {
+      "@id": "https://steelab.tech/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://steelab.tech/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
       {
-        "@type": "Service",
-        "name": "Smart Contract Development",
-        "description": "Custom smart contract development and blockchain integration services"
+        "@type": "Question",
+        "name": "SteeLab là gì?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SteeLab là công ty phát triển blockchain hàng đầu Việt Nam, chuyên về Web3 development, smart contracts, DeFi platforms, và NFT solutions. Chúng tôi cung cấp dịch vụ outsourcing blockchain chất lượng cao với đội ngũ chuyên gia giàu kinh nghiệm, phục vụ khách hàng toàn cầu."
+        }
       },
       {
-        "@type": "Service",
-        "name": "DeFi Platform Development",
-        "description": "Decentralized finance solutions, yield farming, and liquidity protocols"
+        "@type": "Question",
+        "name": "SteeLab chuyên về lĩnh vực nào?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SteeLab chuyên sâu về các lĩnh vực: Smart Contract Development (Ethereum, BSC, Polygon, Solana), DeFi Platform Development (DEX, yield farming, AMM), NFT Marketplace & Minting, Web3 Integration, Blockchain Consulting, và Security Auditing."
+        }
       },
       {
-        "@type": "Service",
-        "name": "NFT Development",
-        "description": "NFT marketplace development, minting platforms, and digital asset solutions"
+        "@type": "Question",
+        "name": "What blockchain networks do you support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support major blockchain networks including Ethereum, Binance Smart Chain, Polygon, Solana, Avalanche, and Arbitrum. Our team has extensive experience with various consensus mechanisms and can develop solutions for both public and private blockchain networks."
+        }
       },
       {
-        "@type": "Service",
-        "name": "Web3 Applications",
-        "description": "Decentralized applications (dApps) and Web3 integration services"
+        "@type": "Question",
+        "name": "How do you ensure smart contract security?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our security-first approach includes comprehensive code reviews, automated testing, formal verification, and third-party audits. We follow industry best practices, implement reentrancy guards, access controls, and gas optimization techniques."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the typical timeline for DeFi project development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DeFi project timelines vary based on complexity. Simple yield farming protocols take 4-6 weeks, while complex DEX platforms require 3-6 months. This includes smart contract development, frontend integration, security audits, and testing phases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide ongoing support after deployment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer comprehensive post-deployment support including 24/7 monitoring, bug fixes, feature updates, and scalability improvements. Our maintenance packages include performance optimization, security patches, and integration with new blockchain features."
+        }
       }
     ]
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://steelab.tech"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Service Offerings Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Blockchain Development & Web3 Solutions",
+    "provider": {
+      "@id": "https://steelab.tech/#organization"
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Blockchain Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Smart Contract Development",
+            "description": "Custom smart contract development and auditing services for Ethereum, BSC, Polygon, and Solana"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "DeFi Platform Development",
+            "description": "Complete DeFi ecosystem development including yield farming, liquidity pools, AMM, and DEX"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "NFT Marketplace & Minting",
+            "description": "End-to-end NFT solutions including marketplace development and minting platforms"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web3 Integration Services",
+            "description": "Seamless integration of Web3 technologies including wallet connectivity and blockchain data indexing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Blockchain Consulting",
+            "description": "Strategic blockchain consulting including tokenomics design and architecture planning"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Security & Auditing",
+            "description": "Comprehensive blockchain security services including smart contract audits and vulnerability assessments"
+          }
+        }
+      ]
+    }
   }
   </script>
 
@@ -257,6 +422,13 @@
       <div class="header" data-aos="fade-up" data-aos-delay="100">
         <div class="title">Why Choose SteeLab</div>
         <p class="para">Your Trusted Blockchain Outsourcing Partner</p>
+        <div class="company-intro" style="max-width: 900px; margin: 2rem auto; text-align: center; padding: 0 1rem;">
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-color);" itemscope itemtype="https://schema.org/Organization">
+            <strong itemprop="name">SteeLab</strong> là <span itemprop="description">công ty phát triển blockchain hàng đầu Việt Nam, chuyên về <strong>Web3</strong>, <strong>smart contracts</strong>, <strong>DeFi</strong>, và <strong>NFT</strong>.
+            Với đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi đã thực hiện thành công hơn 200 dự án blockchain trên các nền tảng như <strong>Ethereum</strong>, <strong>Solana</strong>, <strong>Polygon</strong>, và <strong>Binance Smart Chain</strong>,
+            cung cấp giải pháp công nghệ blockchain tiên tiến cho doanh nghiệp toàn cầu</span>.
+          </p>
+        </div>
       </div>
       <div class="container">
         <div class="row">
@@ -725,7 +897,7 @@
     </div>
     <!-- ! End Company Logos -->
     <!-- ! Start Team -->
-    <div class="team" id="team">
+    <!-- <div class="team" id="team">
       <div class="header" data-aos="fade-up" data-aos-delay="100">
         <div class="title">Blockchain Experts</div>
         <p class="para">Meet Our Web3 Development Team</p>
@@ -782,7 +954,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- ! End Team -->
     <!-- ! Start FAQ's -->
     <div class="faqs" id="faqs">
