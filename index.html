@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html class="dark" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Steelab — Cổng Bảo mật AI Doanh nghiệp | Tuân thủ NĐ13 & Bảo vệ Dữ liệu</title>
+    <meta name="description" content="Steelab là giải pháp AI Gateway hàng đầu Việt Nam, tự động loại bỏ PII, phòng chống Prompt Injection và đảm bảo tuân thủ Nghị định 13. Bảo vệ dữ liệu doanh nghiệp khi sử dụng ChatGPT, Claude, Gemini. Dùng thử miễn phí 30 ngày." />
+    <meta name="keywords" content="AI Gateway, bảo mật AI, bảo vệ dữ liệu doanh nghiệp, Nghị định 13, NĐ13, PII redaction, prompt injection, DLP, ChatGPT bảo mật, AI an toàn doanh nghiệp, tuân thủ GDPR, Steelab" />
+    <meta name="author" content="Steelab Security" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://steelab.vn/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://steelab.vn/" />
+    <meta property="og:title" content="Steelab — Cổng Bảo mật AI Doanh nghiệp | Tuân thủ NĐ13" />
+    <meta property="og:description" content="Giải pháp AI Gateway tự động loại bỏ PII, phòng chống Prompt Injection và đảm bảo tuân thủ Nghị định 13. Dùng thử miễn phí 30 ngày." />
+    <meta property="og:image" content="https://steelab.vn/assets/og-image.png" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="Steelab" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Steelab — Cổng Bảo mật AI Doanh nghiệp" />
+    <meta name="twitter:description" content="Tự động loại bỏ PII, phòng chống Prompt Injection, tuân thủ NĐ13. Dùng thử miễn phí 30 ngày." />
+    <meta name="twitter:image" content="https://steelab.vn/assets/og-image.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Steelab",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Cloud, On-premise",
+        "description": "Cổng bảo mật AI doanh nghiệp — tự động loại bỏ thông tin cá nhân (PII), phòng chống Prompt Injection và đảm bảo tuân thủ Nghị định 13 về bảo vệ dữ liệu.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "VND",
+            "description": "Dùng thử miễn phí 30 ngày"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Steelab Security",
+            "url": "https://steelab.vn"
+        },
+        "featureList": [
+            "Loại bỏ PII thời gian thực (50+ loại)",
+            "Phòng chống Prompt Injection",
+            "Phân tích ngữ cảnh Semantic DLP",
+            "Tuân thủ Nghị định 13, GDPR, ISO 27001",
+            "Hỗ trợ OpenAI, Anthropic, Google, Ollama",
+            "Triển khai On-premise"
+        ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563eb",
+                        "primary-soft": "#3b82f6",
+                        "accent": "#c9a84c",
+                        "accent-soft": "#d4b86a",
+                        "deep": "#050a14",
+                        "surface": "#0c1322",
+                        "surface-up": "#111b2e",
+                        "surface-bright": "#182438",
+                        "edge": "#1e2d44",
+                        "muted": "#64748b",
+                        "dim": "#3d4f66",
+                    },
+                    fontFamily: {
+                        "heading": ["'Lora'", "Georgia", "serif"],
+                        "body": ["'Be Vietnam Pro'", "system-ui", "sans-serif"],
+                        "mono": ["'JetBrains Mono'", "monospace"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+            background: #050a14;
+            color: #cbd5e1;
+            overflow-x: hidden;
+        }
+
+        /* --- Grain overlay --- */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.022;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        /* --- Typography --- */
+        .font-heading {
+            font-family: 'Lora', Georgia, serif;
+        }
+
+        .label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6875rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #64748b;
+        }
+
+        /* --- Custom scrollbar --- */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050a14; }
+        ::-webkit-scrollbar-thumb { background: #1e2d44; border-radius: 99px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+
+        /* --- Animations --- */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(2.2); opacity: 0; }
+        }
+
+        @keyframes reveal-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes reveal-left {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes counter-scan {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            0%, 50% { border-color: #2563eb; }
+            51%, 100% { border-color: transparent; }
+        }
+
+        @keyframes grid-line-h {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .animate-float { animation: float-slow 5s ease-in-out infinite; }
+        .animate-marquee { animation: marquee 35s linear infinite; }
+
+        /* --- Stagger reveal for scroll-triggered elements --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Hero entrance --- */
+        .hero-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: reveal-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .hero-delay-1 { animation-delay: 0.15s; }
+        .hero-delay-2 { animation-delay: 0.3s; }
+        .hero-delay-3 { animation-delay: 0.45s; }
+        .hero-delay-4 { animation-delay: 0.6s; }
+        .hero-delay-5 { animation-delay: 0.75s; }
+
+        /* --- Glow effects --- */
+        .glow-primary {
+            box-shadow: 0 0 80px rgba(37, 99, 235, 0.12), 0 0 160px rgba(37, 99, 235, 0.04);
+        }
+
+        .glow-accent {
+            box-shadow: 0 0 40px rgba(201, 168, 76, 0.08);
+        }
+
+        /* --- Nav glass --- */
+        .nav-glass {
+            background: rgba(5, 10, 20, 0.75);
+            backdrop-filter: blur(20px) saturate(1.3);
+            -webkit-backdrop-filter: blur(20px) saturate(1.3);
+        }
+
+        /* --- Terminal window --- */
+        .terminal {
+            background: #080d18;
+            border: 1px solid #1e2d44;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .terminal-bar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 16px;
+            border-bottom: 1px solid #141e30;
+            background: rgba(10, 16, 28, 0.9);
+        }
+
+        .terminal-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        /* --- Step number large --- */
+        .step-number {
+            font-family: 'Lora', serif;
+            font-size: clamp(4rem, 8vw, 7rem);
+            font-weight: 700;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 1px #1e2d44;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .group:hover .step-number {
+            -webkit-text-stroke: 1px #2563eb;
+            text-shadow: 0 0 60px rgba(37, 99, 235, 0.25);
+        }
+
+        /* --- Quote styling --- */
+        .pull-quote {
+            font-family: 'Lora', Georgia, serif;
+            font-style: italic;
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        /* --- Buttons --- */
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            padding: 14px 32px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #3b82f6;
+            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:hover::after {
+            opacity: 1;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #cbd5e1;
+            padding: 14px 32px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            border-radius: 8px;
+            border: 1px solid #1e2d44;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-outline:hover {
+            border-color: #3b82f6;
+            background: rgba(37, 99, 235, 0.06);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* --- Bento grid --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+        }
+
+        .bento-grid > * {
+            background: #0c1322;
+            transition: background 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .bento-grid > *:hover {
+            background: #0f1829;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .bento-grid > * {
+                grid-column: span 1 !important;
+                grid-row: span 1 !important;
+            }
+        }
+
+        /* --- Comparison table --- */
+        .compare-table th,
+        .compare-table td {
+            padding: 20px 24px;
+            text-align: left;
+            border-bottom: 1px solid #141e30;
+        }
+
+        .compare-table thead th {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .compare-table .highlight-col {
+            background: rgba(37, 99, 235, 0.04);
+            border-left: 1px solid rgba(37, 99, 235, 0.1);
+            border-right: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        /* --- Section divider with glow --- */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #1e2d44 20%, #2563eb33 50%, #1e2d44 80%, transparent);
+            position: relative;
+        }
+
+        .section-divider::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -4px;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #1e2d44;
+            border: 1px solid #2563eb33;
+        }
+
+        /* --- Card hover lift --- */
+        .card-lift {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+        }
+
+        .card-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(37, 99, 235, 0.05);
+        }
+
+        /* --- Animated underline for nav --- */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #2563eb;
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* --- Icon container pulse on hover --- */
+        .icon-container {
+            position: relative;
+        }
+
+        .icon-container::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .group:hover .icon-container::before {
+            opacity: 1;
+            animation: pulse-ring 1.2s ease-out;
+        }
+
+        /* --- Gradient text --- */
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #60a5fa 50%, #c9a84c 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 6s ease infinite;
+        }
+
+        /* --- Horizontal rule with label --- */
+        .labeled-rule {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .labeled-rule::before,
+        .labeled-rule::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #1e2d44);
+        }
+
+        .labeled-rule::after {
+            background: linear-gradient(90deg, #1e2d44, transparent);
+        }
+
+        /* --- Mobile hamburger --- */
+        .hamburger span {
+            display: block;
+            width: 18px;
+            height: 1.5px;
+            background: #94a3b8;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(3px, 3px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(3px, -3px);
+        }
+
+        /* --- Mobile nav --- */
+        .mobile-nav {
+            display: none;
+        }
+
+        .mobile-nav.open {
+            display: block;
+        }
+
+        /* reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+            .hero-reveal { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================ -->
+    <!-- NAVBAR                                        -->
+    <!-- ============================================ -->
+    <nav class="fixed top-0 w-full z-50 nav-glass border-b border-edge/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16 h-[72px] flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings: 'FILL' 1">shield_lock</span>
+                </div>
+                <span class="font-heading text-xl font-bold text-white tracking-tight">Steelab</span>
+            </a>
+
+            <!-- Desktop nav -->
+            <div class="hidden lg:flex items-center gap-10">
+                <a class="nav-link text-[13px] font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#san-pham">Sản phẩm</a>
+                <a class="nav-link text-[13px] font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#giai-phap">Giải pháp</a>
+                <a class="nav-link text-[13px] font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#tuan-thu">Tuân thủ NĐ13</a>
+                <a class="nav-link text-[13px] font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#tai-lieu">Tài liệu</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden md:block text-[13px] font-medium text-slate-400 hover:text-white transition-colors">Đăng nhập</a>
+                <button class="btn-primary text-[13px] !py-2.5 !px-5 hidden sm:inline-flex">Đặt lịch POC</button>
+                <!-- Mobile hamburger -->
+                <button class="lg:hidden hamburger flex flex-col gap-1.5 p-2" onclick="this.classList.toggle('active'); const nav = document.getElementById('mobile-nav'); nav.hidden = !nav.hidden;" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile nav dropdown -->
+        <div id="mobile-nav" class="lg:hidden absolute top-[72px] left-0 w-full bg-deep/95 backdrop-blur-xl border-b border-edge/30" hidden>
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-edge/20" href="#san-pham">Sản phẩm</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-edge/20" href="#giai-phap">Giải pháp</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-edge/20" href="#tuan-thu">Tuân thủ NĐ13</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-edge/20" href="#tai-lieu">Tài liệu</a>
+                <button class="btn-primary text-sm w-full mt-2 sm:hidden">Đặt lịch POC</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO — Dramatic, editorial entrance           -->
+    <!-- ============================================ -->
+    <section class="relative min-h-screen flex items-center pt-[72px] overflow-hidden">
+        <!-- Background atmosphere -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-[5%] left-[10%] w-[600px] h-[600px] bg-primary/[0.06] rounded-full blur-[180px]"></div>
+            <div class="absolute bottom-[15%] right-[5%] w-[500px] h-[500px] bg-accent/[0.035] rounded-full blur-[150px]"></div>
+            <!-- Subtle grid overlay -->
+            <div class="absolute inset-0 opacity-[0.015]"
+                style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 80px 80px;">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-16 w-full py-20 lg:py-0">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-6 items-center">
+                <!-- Left: Content -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="space-y-3 hero-reveal hero-delay-1">
+                        <span class="label text-primary tracking-[0.2em]">Next-Gen AI Security</span>
+                        <div class="flex items-center gap-3 mt-1">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                            </span>
+                            <span class="label text-emerald-400/80">Gateway Active — 2.4M req/sec</span>
+                        </div>
+                    </div>
+
+                    <h1 class="font-heading text-[clamp(2.75rem,6vw,5rem)] font-bold leading-[1.05] text-white hero-reveal hero-delay-2">
+                        Khai phá Sức mạnh<br>
+                        <span class="text-primary">Cloud AI</span>.<br>
+                        <span class="text-accent">Bảo mật</span> Tuyệt đối.
+                    </h1>
+
+                    <p class="text-lg lg:text-xl text-slate-400 leading-relaxed max-w-lg font-light hero-reveal hero-delay-3">
+                        Đảm bảo tuân thủ NĐ13 và kiểm soát an toàn dữ liệu doanh nghiệp khi sử dụng các mô hình AI ngôn ngữ lớn.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2 hero-reveal hero-delay-4">
+                        <button class="btn-primary !px-8">Bắt đầu 30 ngày POC</button>
+                        <button class="btn-outline flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">play_circle</span>
+                            Xem Demo
+                        </button>
+                    </div>
+
+                    <!-- Metrics strip -->
+                    <div class="flex flex-wrap items-center gap-8 pt-8 border-t border-edge/40 hero-reveal hero-delay-5">
+                        <div class="group cursor-default">
+                            <div class="text-3xl font-heading font-bold text-white group-hover:text-primary transition-colors">50+</div>
+                            <div class="label mt-1">Loại PII</div>
+                        </div>
+                        <div class="w-px h-10 bg-edge/40"></div>
+                        <div class="group cursor-default">
+                            <div class="text-3xl font-heading font-bold text-accent">94<span class="text-lg text-accent/60">/100</span></div>
+                            <div class="label mt-1">Điểm Tuân thủ</div>
+                        </div>
+                        <div class="w-px h-10 bg-edge/40"></div>
+                        <div class="group cursor-default">
+                            <div class="text-3xl font-heading font-bold text-white group-hover:text-emerald-400 transition-colors">&lt;5ms</div>
+                            <div class="label mt-1">Latency</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Terminal mockup -->
+                <div class="lg:col-span-6 lg:pl-6 hero-reveal hero-delay-3">
+                    <div class="relative">
+                        <div class="terminal rounded-2xl overflow-hidden glow-primary">
+                            <div class="terminal-bar">
+                                <div class="terminal-dot bg-[#ff5f57]"></div>
+                                <div class="terminal-dot bg-[#febc2e]"></div>
+                                <div class="terminal-dot bg-[#28c840]"></div>
+                                <span class="ml-4 text-[10px] text-dim tracking-widest uppercase">Steelab DLP Engine v4.2</span>
+                            </div>
+                            <div class="p-6 lg:p-8 space-y-5 text-[13px] leading-relaxed">
+                                <div class="flex gap-3">
+                                    <span class="text-primary-soft font-medium shrink-0">User :</span>
+                                    <span class="text-slate-300">Tóm tắt hợp đồng số HD2023-01 của khách hàng Nguyễn Văn A, CMT 012345678...</span>
+                                </div>
+                                <div class="h-px bg-edge/20"></div>
+                                <div class="space-y-3">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1">verified_user</span>
+                                        <span class="text-primary font-semibold text-xs tracking-wide">STEELAB INTERCEPTING</span>
+                                    </div>
+                                    <div class="pl-5 border-l border-primary/20 space-y-2 text-[11px]">
+                                        <p class="text-emerald-400/80"><span class="text-dim">></span> Detected PII: <span class="text-white/60">[Full Name]</span> → <span class="text-emerald-400 font-semibold">Sanitized</span></p>
+                                        <p class="text-emerald-400/80"><span class="text-dim">></span> Detected PII: <span class="text-white/60">[ID Number]</span> → <span class="text-emerald-400 font-semibold">Sanitized</span></p>
+                                        <p class="text-accent/80"><span class="text-dim">></span> Compliance: <span class="text-white/60">ND13</span> → <span class="text-emerald-400 font-semibold">Pass</span></p>
+                                        <p class="text-primary/60"><span class="text-dim">></span> Latency: <span class="text-white/60">3.2ms</span> · Tokens saved: <span class="text-white/60">12</span></p>
+                                    </div>
+                                </div>
+                                <div class="h-px bg-edge/20"></div>
+                                <div class="flex gap-3">
+                                    <span class="text-emerald-400 font-medium shrink-0">Safe :</span>
+                                    <span class="text-slate-500 italic">Tóm tắt hợp đồng số [CONTRACT_ID] của khách hàng [CUSTOMER_NAME], CMT [ID_REDACTED]...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-4 -left-4 bg-surface border border-edge rounded-xl px-4 py-3 flex items-center gap-3 shadow-2xl animate-float">
+                            <div class="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-emerald-400 text-xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
+                            </div>
+                            <div>
+                                <div class="text-xs font-semibold text-white">Tuân thủ NĐ13</div>
+                                <div class="text-[10px] text-dim font-mono">Score 94/100</div>
+                            </div>
+                        </div>
+                        <!-- Floating latency badge -->
+                        <div class="absolute -top-3 -right-3 bg-surface border border-edge rounded-xl px-3 py-2 shadow-2xl animate-float" style="animation-delay: 1.5s;">
+                            <div class="text-[10px] font-mono text-primary font-semibold">P99 &lt; 5ms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 hero-reveal hero-delay-5">
+            <span class="text-[10px] font-mono text-dim tracking-widest uppercase">Cuộn xuống</span>
+            <div class="w-px h-8 bg-gradient-to-b from-edge to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LOGO MARQUEE                                  -->
+    <!-- ============================================ -->
+    <div class="section-divider"></div>
+    <section class="py-12 overflow-hidden">
+        <p class="label text-center mb-10 tracking-[0.2em]">Đối tác tin cậy của các tổ chức hàng đầu</p>
+        <div class="relative overflow-hidden">
+            <div class="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-deep to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-deep to-transparent z-10 pointer-events-none"></div>
+            <div class="flex items-center gap-20 animate-marquee whitespace-nowrap">
+                <div class="h-8 w-32 bg-contain bg-no-repeat bg-center opacity-25 grayscale hover:opacity-50 transition-opacity shrink-0"
+                    style="background-image: url('assets/logo-bank.png')"></div>
+                <div class="h-8 w-32 bg-contain bg-no-repeat bg-center opacity-25 grayscale hover:opacity-50 transition-opacity shrink-0"
+                    style="background-image: url('assets/logo-telecom.png')"></div>
+                <span class="text-dim/30 font-bold text-lg tracking-tight shrink-0 hover:text-dim/60 transition-colors">NEXUS TECH</span>
+                <span class="text-dim/30 font-bold text-lg tracking-tight shrink-0 hover:text-dim/60 transition-colors">GOVSECURE</span>
+                <span class="text-dim/30 font-bold text-lg tracking-tight shrink-0 hover:text-dim/60 transition-colors">ELITE FINANCE</span>
+                <span class="text-dim/30 font-bold text-lg tracking-tight shrink-0 hover:text-dim/60 transition-colors">DATASHIELD</span>
+                <!-- Duplicate for seamless loop -->
+                <div class="h-8 w-32 bg-contain bg-no-repeat bg-center opacity-25 grayscale shrink-0"
+                    style="background-image: url('assets/logo-bank.png')"></div>
+                <div class="h-8 w-32 bg-contain bg-no-repeat bg-center opacity-25 grayscale shrink-0"
+                    style="background-image: url('assets/logo-telecom.png')"></div>
+                <span class="text-dim/30 font-bold text-lg tracking-tight shrink-0">NEXUS TECH</span>
+                <span class="text-dim/30 font-bold text-lg tracking-tight shrink-0">GOVSECURE</span>
+                <span class="text-dim/30 font-bold text-lg tracking-tight shrink-0">ELITE FINANCE</span>
+                <span class="text-dim/30 font-bold text-lg tracking-tight shrink-0">DATASHIELD</span>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+
+    <!-- ============================================ -->
+    <!-- PAIN POINTS — Asymmetric 2-col sticky         -->
+    <!-- ============================================ -->
+    <section class="py-28 lg:py-40">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+            <div class="grid lg:grid-cols-12 gap-16 lg:gap-24">
+                <!-- Left: Section intro - sticky -->
+                <div class="lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
+                    <div class="reveal">
+                        <span class="label text-accent tracking-[0.2em]">01 — Thách thức</span>
+                        <h2 class="font-heading text-3xl lg:text-[2.75rem] font-bold text-white mt-5 leading-snug">
+                            Rủi ro khi ứng dụng AI thiếu kiểm soát
+                        </h2>
+                        <p class="text-slate-400 mt-6 leading-relaxed font-light lg:text-lg">
+                            Những nguy cơ tiềm ẩn doanh nghiệp phải đối mặt khi triển khai AI trong môi trường vận hành thực tế.
+                        </p>
+                        <div class="hidden lg:block mt-10 w-12 h-px bg-accent/40"></div>
+                    </div>
+                </div>
+
+                <!-- Right: 3 challenges stacked -->
+                <div class="lg:col-span-7 lg:col-start-6 space-y-0">
+                    <div class="py-10 border-b border-edge/40 group reveal" data-delay="0">
+                        <div class="flex items-start gap-6">
+                            <div class="relative">
+                                <span class="text-5xl font-heading font-bold text-edge/60 group-hover:text-red-500/30 transition-colors duration-500 shrink-0">01</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-red-400/90 transition-colors duration-300">Rò rỉ dữ liệu (PII)</h3>
+                                <p class="text-slate-400 leading-relaxed font-light">Nguy cơ lộ lọt thông tin cá nhân khách hàng qua các prompt AI, bao gồm số định danh, thẻ tín dụng và hồ sơ bệnh án. Một prompt không kiểm soát có thể để lộ toàn bộ cơ sở dữ liệu khách hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-10 border-b border-edge/40 group reveal" data-delay="100">
+                        <div class="flex items-start gap-6">
+                            <div class="relative">
+                                <span class="text-5xl font-heading font-bold text-edge/60 group-hover:text-orange-500/30 transition-colors duration-500 shrink-0">02</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-orange-400/90 transition-colors duration-300">Shadow AI</h3>
+                                <p class="text-slate-400 leading-relaxed font-light">Sự bùng nổ của các công cụ AI không được phê duyệt trong nội bộ, khiến CNTT không thể kiểm soát luồng dữ liệu ra ngoài. 68% nhân viên sử dụng AI mà không báo IT.</p>
+                                <div class="mt-4 flex items-center gap-2">
+                                    <div class="h-1.5 w-[68%] bg-orange-500/20 rounded-full overflow-hidden">
+                                        <div class="h-full bg-orange-500/60 rounded-full" style="width: 68%"></div>
+                                    </div>
+                                    <span class="text-xs font-mono text-orange-400/60">68%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-10 group reveal" data-delay="200">
+                        <div class="flex items-start gap-6">
+                            <div class="relative">
+                                <span class="text-5xl font-heading font-bold text-edge/60 group-hover:text-primary/30 transition-colors duration-500 shrink-0">03</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary/90 transition-colors duration-300">Vi phạm tuân thủ (NĐ13)</h3>
+                                <p class="text-slate-400 leading-relaxed font-light">Áp lực pháp lý từ Nghị định 13 về bảo vệ dữ liệu cá nhân yêu cầu quy trình xử lý dữ liệu minh bạch và bảo mật tuyệt đối. Mức phạt lên đến 5% doanh thu.</p>
+                                <div class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-500/5 border border-red-500/10">
+                                    <span class="material-symbols-outlined text-red-400 text-sm">warning</span>
+                                    <span class="text-xs font-mono text-red-400/80">Phạt tối đa 5% doanh thu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SOLUTION — Full-bleed immersive               -->
+    <!-- ============================================ -->
+    <section class="relative py-28 lg:py-40 bg-surface overflow-hidden" id="giai-phap">
+        <!-- Grid pattern -->
+        <div class="absolute inset-0 opacity-[0.02] pointer-events-none"
+            style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 60px 60px;">
+        </div>
+        <!-- Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/[0.04] rounded-full blur-[200px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
+            <div class="max-w-2xl mb-20 reveal">
+                <span class="label text-primary tracking-[0.2em]">02 — Giải pháp</span>
+                <h2 class="font-heading text-3xl lg:text-5xl font-bold text-white mt-5 leading-snug">
+                    AI Gateway<br>toàn diện
+                </h2>
+                <p class="text-slate-400 mt-6 leading-relaxed font-light text-lg">
+                    Steelab đóng vai trò như một lớp tường lửa thông minh giữa nhân viên và các mô hình AI, tự động xử lý và bảo vệ dữ liệu nhạy cảm.
+                </p>
+            </div>
+
+            <!-- 3 solution pillars -->
+            <div class="grid md:grid-cols-3 gap-px bg-edge/20 rounded-2xl overflow-hidden">
+                <div class="bg-surface p-8 lg:p-12 group card-lift reveal" data-delay="0">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="text-sm font-mono text-primary font-semibold">01</span>
+                        <div class="h-px flex-1 bg-edge/40 group-hover:bg-primary/30 transition-colors duration-500"></div>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-primary text-2xl">policy</span>
+                    </div>
+                    <h4 class="text-white font-semibold text-xl mb-4">Loại bỏ PII thời gian thực</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">Tự động nhận diện và ẩn danh hơn 50 loại dữ liệu cá nhân trong prompt trước khi gửi đến Cloud AI.</p>
+                </div>
+                <div class="bg-surface p-8 lg:p-12 group card-lift reveal" data-delay="100">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="text-sm font-mono text-primary font-semibold">02</span>
+                        <div class="h-px flex-1 bg-edge/40 group-hover:bg-primary/30 transition-colors duration-500"></div>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-purple-400 text-2xl">psychology</span>
+                    </div>
+                    <h4 class="text-white font-semibold text-xl mb-4">Phân tích Ngữ cảnh Semantic</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">Không chỉ dựa trên từ khoá, AI của chúng tôi hiểu ngữ cảnh để ngăn chặn việc rò rỉ bí mật kinh doanh tinh vi.</p>
+                </div>
+                <div class="bg-surface p-8 lg:p-12 group card-lift reveal" data-delay="200">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="text-sm font-mono text-primary font-semibold">03</span>
+                        <div class="h-px flex-1 bg-edge/40 group-hover:bg-primary/30 transition-colors duration-500"></div>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-red-400 text-2xl">shield</span>
+                    </div>
+                    <h4 class="text-white font-semibold text-xl mb-4">Phòng chống Prompt Injection</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">Ngăn chặn các kỹ thuật tấn công prompt bẻ khoá mô hình hoặc ép buộc mô hình tiết lộ thông tin nội bộ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CAPABILITIES — Bento Grid                     -->
+    <!-- ============================================ -->
+    <section class="py-28 lg:py-40" id="san-pham">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20">
+                <div class="max-w-xl reveal">
+                    <span class="label text-accent tracking-[0.2em]">03 — Năng lực</span>
+                    <h2 class="font-heading text-3xl lg:text-[2.75rem] font-bold text-white mt-5 leading-snug">
+                        Hệ thống tính năng<br>toàn diện
+                    </h2>
+                </div>
+                <p class="text-slate-400 font-light max-w-md reveal" data-delay="100">Kiểm soát hoàn toàn luồng dữ liệu AI với 8 module bảo mật lõi cốt.</p>
+            </div>
+
+            <!-- Bento grid -->
+            <div class="bento-grid rounded-2xl overflow-hidden border border-edge/30" style="background: #141e30;">
+
+                <!-- Row 1: Featured large + 2 small -->
+                <div class="p-8 lg:p-12 col-span-2 row-span-2 flex flex-col justify-between min-h-[300px] group reveal" data-delay="0">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-8 icon-container">
+                            <span class="material-symbols-outlined text-primary text-2xl">policy</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">PII Redaction</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light max-w-sm">Tự động phát hiện và ẩn danh thông tin cá nhân — email, SĐT, CMND/CCCD, tên Tiếng Việt, số thẻ tín dụng, tài khoản ngân hàng. Hơn 50 loại PII được nhận diện và xử lý tức thì.</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-8">
+                        <span class="font-mono text-xs text-primary px-2.5 py-1 rounded-md bg-primary/5 border border-primary/10">50+ PII types</span>
+                        <span class="font-mono text-xs text-dim px-2.5 py-1 rounded-md bg-surface-bright border border-edge/30">Real-time</span>
+                    </div>
+                </div>
+
+                <div class="p-8 lg:p-10 col-span-1 group reveal" data-delay="50">
+                    <div class="w-11 h-11 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-purple-400 text-xl">psychology</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Semantic DLP</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">Phân tích ngữ cảnh bằng LLM để phát hiện bí mật kinh doanh, tài liệu nội bộ.</p>
+                </div>
+
+                <div class="p-8 lg:p-10 col-span-1 group reveal" data-delay="100">
+                    <div class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-red-400 text-xl">shield</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">AI Guardrails</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">Chặn đứng prompt injection, jailbreak và nội dung độc hại.</p>
+                </div>
+
+                <div class="p-8 lg:p-10 col-span-1 group reveal" data-delay="150">
+                    <div class="w-11 h-11 rounded-xl bg-orange-500/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-orange-400 text-xl">bolt</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Streaming SSE</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">Hỗ trợ Server-Sent Events với De-redaction thời gian thực.</p>
+                </div>
+
+                <div class="p-8 lg:p-10 col-span-1 group reveal" data-delay="200">
+                    <div class="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-emerald-400 text-xl">database</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Audit Logging</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">Ghi log chi tiết mọi request/response vào PostgreSQL.</p>
+                </div>
+
+                <div class="p-8 lg:p-10 col-span-1 group reveal" data-delay="250">
+                    <div class="w-11 h-11 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-cyan-400 text-xl">tune</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Rate Limiting</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">Giới hạn truy cập theo API key, quản lý chi phí LLM.</p>
+                </div>
+
+                <div class="p-8 lg:p-10 col-span-1 group reveal" data-delay="300">
+                    <div class="w-11 h-11 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-6 icon-container">
+                        <span class="material-symbols-outlined text-indigo-400 text-xl">api</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">OpenAI-compatible</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light">Drop-in replacement, không cần sửa code khi dùng OpenAI SDK.</p>
+                </div>
+
+                <!-- Bottom full-width bar -->
+                <div class="p-6 lg:p-10 col-span-4 flex flex-col md:flex-row md:items-center gap-6 md:gap-12 reveal" data-delay="350">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-pink-500/10 flex items-center justify-center icon-container">
+                            <span class="material-symbols-outlined text-pink-400 text-xl">hub</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white">Multi-provider Router</h3>
+                            <p class="text-slate-400 text-xs font-light">Hỗ trợ tất cả LLM lớn qua LiteLLM Router.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block w-px h-10 bg-edge/40"></div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] font-mono px-3 py-1.5 rounded-lg bg-surface-bright text-slate-300 border border-edge/30 hover:border-primary/30 transition-colors cursor-default">OpenAI</span>
+                        <span class="text-[11px] font-mono px-3 py-1.5 rounded-lg bg-surface-bright text-slate-300 border border-edge/30 hover:border-primary/30 transition-colors cursor-default">Anthropic</span>
+                        <span class="text-[11px] font-mono px-3 py-1.5 rounded-lg bg-surface-bright text-slate-300 border border-edge/30 hover:border-primary/30 transition-colors cursor-default">Google</span>
+                        <span class="text-[11px] font-mono px-3 py-1.5 rounded-lg bg-surface-bright text-slate-300 border border-edge/30 hover:border-primary/30 transition-colors cursor-default">Ollama</span>
+                        <span class="text-[11px] font-mono px-3 py-1.5 rounded-lg bg-surface-bright text-dim border border-edge/30">+ more</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3-STEP PROCESS — Large numbers                -->
+    <!-- ============================================ -->
+    <section class="py-28 lg:py-40 bg-surface relative overflow-hidden">
+        <!-- Decorative line -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-transparent to-edge/40"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+            <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+                <span class="label text-primary tracking-[0.2em]">04 — Quy trình</span>
+                <h2 class="font-heading text-3xl lg:text-[2.75rem] font-bold text-white mt-5">Bảo mật 3 bước</h2>
+                <p class="text-slate-400 mt-4 font-light">Mọi prompt đều được kiểm tra và bảo vệ trong mili-giây.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-px bg-edge/20 rounded-2xl overflow-hidden">
+                <div class="bg-surface p-10 lg:p-14 text-center group card-lift reveal" data-delay="0">
+                    <div class="step-number mb-8">01</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Intercept</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">Mọi yêu cầu từ nhân viên gửi đến AI đều được chuyển hướng qua Gateway bảo mật của Steelab.</p>
+                </div>
+                <div class="bg-surface p-10 lg:p-14 text-center group card-lift reveal" data-delay="100">
+                    <div class="step-number mb-8">02</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Sanitize</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">Dữ liệu nhạy cảm được bóc tách và thay thế bằng các token an toàn. Cloud AI không bao giờ thấy dữ liệu thật.</p>
+                </div>
+                <div class="bg-surface p-10 lg:p-14 text-center group card-lift reveal" data-delay="200">
+                    <div class="step-number mb-8">03</div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Secure Response</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">Phản hồi từ AI được kiểm duyệt một lần nữa và khôi phục thông tin gốc trước khi trả về người dùng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- USE CASES — Featured + stacked                -->
+    <!-- ============================================ -->
+    <section class="py-28 lg:py-40">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20">
+                <div class="max-w-xl reveal">
+                    <span class="label text-accent tracking-[0.2em]">05 — Hệ sinh thái</span>
+                    <h2 class="font-heading text-3xl lg:text-[2.75rem] font-bold text-white mt-5 leading-snug">
+                        Ứng dụng AI an toàn
+                    </h2>
+                </div>
+                <button class="text-primary text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all group reveal" data-delay="100">
+                    Xem tất cả ứng dụng
+                    <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-5">
+                <!-- Featured large card -->
+                <div class="lg:col-span-7 bg-surface rounded-2xl overflow-hidden border border-edge/30 group card-lift reveal" data-delay="0">
+                    <div class="aspect-[16/10] bg-surface-up relative overflow-hidden">
+                        <img src="assets/chatbot-mockup.png" alt="Internal Chatbot"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
+                        <span class="absolute top-4 right-4 font-mono text-[10px] text-emerald-400 bg-surface/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-edge/30 tracking-wider uppercase">
+                            Được bảo vệ bởi Steelab
+                        </span>
+                    </div>
+                    <div class="p-8 lg:p-10">
+                        <h4 class="text-xl font-heading font-semibold text-white mb-3">Chatbot Nội bộ</h4>
+                        <p class="text-slate-400 text-sm font-light leading-relaxed max-w-md">Hỏi đáp về chính sách, tài liệu nội bộ với tốc độ AI nhưng bảo mật On-premise. Tích hợp trực tiếp với Slack, Teams và các nền tảng nội bộ.</p>
+                    </div>
+                </div>
+
+                <!-- 2 stacked cards -->
+                <div class="lg:col-span-5 flex flex-col gap-5">
+                    <div class="flex-1 bg-surface rounded-2xl overflow-hidden border border-edge/30 group card-lift reveal" data-delay="100">
+                        <div class="aspect-[16/9] bg-surface-up relative overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfya45ugTfdWB8cO8geo81J8bXmA6hSf6vmccQbD5y1nOw3CxLVhaTgs5ncTKXzWTjksTB-d-BEavOzxNTP6V0oj0C3Ry9YlkR-jQy18E71-Jx8YLQEar1ObhGa8gldSVycZpFzX_Klu7w53ph_bqPHgikOcTispwyGiwGKMv7n3I36wHsimH8ilO904HC90EszEFIuXPLBn9CkbnrBsDXBCP20n8VuNCnY4rT70uGeneXv-lblOH3maY7T03EspVxsVHLlsJyLr4')">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-6 lg:p-8">
+                            <h4 class="font-heading font-semibold text-white text-lg mb-2">Trợ lý AI Cá nhân</h4>
+                            <p class="text-slate-400 text-sm font-light">Viết email, báo cáo và phân tích số liệu an toàn.</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-surface rounded-2xl overflow-hidden border border-edge/30 group card-lift reveal" data-delay="200">
+                        <div class="aspect-[16/9] bg-surface-up relative overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiFubq4q3tjS3wVQpQMzs65Mp1TjpVfLUWS1CBqeYkHGHuwaUQsWdGXNDHPvvjQ2y6OjFpaGjkETsLpH7o-6RoDNNlpaZRr-kGgMtiiA8OFvtj0rTrwv8MbLGkJeo_E0bNRz07gHSUd4yFzEYKu2SvBq6b6-d41gTITMNoGqA-yfY-8lqwC9m9rZ2EacdA4Kgb1zTDd4C4SfF5kaQWLbS_eDMbBT4_xrGFPOJKMzJXhdqgunDRfgBT3_gjeizeF99HvpuV894SouE')">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-6 lg:p-8">
+                            <h4 class="font-heading font-semibold text-white text-lg mb-2">Workflow Automation</h4>
+                            <p class="text-slate-400 text-sm font-light">Tự động hoá quy trình giữa nhiều phòng ban.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- COMPLIANCE + TESTIMONIAL                      -->
+    <!-- ============================================ -->
+    <section class="py-28 lg:py-40 bg-surface" id="tuan-thu">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+            <div class="grid lg:grid-cols-12 gap-16 lg:gap-24">
+                <!-- Left: Compliance -->
+                <div class="lg:col-span-6">
+                    <div class="reveal">
+                        <span class="label text-primary tracking-[0.2em]">06 — Tuân thủ</span>
+                        <h2 class="font-heading text-3xl lg:text-[2.75rem] font-bold text-white mt-5 leading-snug">
+                            NĐ13 &amp; Tiêu chuẩn Quốc tế
+                        </h2>
+                        <p class="text-slate-400 mt-6 leading-relaxed font-light lg:text-lg">
+                            Xây dựng với triết lý "Privacy by Design", đảm bảo doanh nghiệp luôn đi trước các yêu cầu pháp lý.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 mt-12">
+                        <div class="p-6 bg-deep rounded-xl border border-edge/30 group hover:border-primary/20 transition-all duration-300 card-lift reveal" data-delay="0">
+                            <span class="material-symbols-outlined text-primary text-2xl mb-4 block" style="font-variation-settings: 'FILL' 1">cloud_off</span>
+                            <h5 class="font-semibold text-white text-sm mb-1.5">On-premise</h5>
+                            <p class="text-xs text-dim font-light leading-relaxed">Triển khai hoàn toàn trong hạ tầng riêng.</p>
+                        </div>
+                        <div class="p-6 bg-deep rounded-xl border border-edge/30 group hover:border-primary/20 transition-all duration-300 card-lift reveal" data-delay="50">
+                            <span class="material-symbols-outlined text-primary text-2xl mb-4 block" style="font-variation-settings: 'FILL' 1">storage</span>
+                            <h5 class="font-semibold text-white text-sm mb-1.5">No Data Storage</h5>
+                            <p class="text-xs text-dim font-light leading-relaxed">Không bao giờ lưu trữ dữ liệu nhạy cảm.</p>
+                        </div>
+                        <div class="p-6 bg-deep rounded-xl border border-edge/30 group hover:border-primary/20 transition-all duration-300 card-lift reveal" data-delay="100">
+                            <span class="material-symbols-outlined text-primary text-2xl mb-4 block" style="font-variation-settings: 'FILL' 1">verified</span>
+                            <h5 class="font-semibold text-white text-sm mb-1.5">GDPR Ready</h5>
+                            <p class="text-xs text-dim font-light leading-relaxed">Đáp ứng tiêu chuẩn bảo mật Châu Âu.</p>
+                        </div>
+                        <div class="p-6 bg-deep rounded-xl border border-edge/30 group hover:border-primary/20 transition-all duration-300 card-lift reveal" data-delay="150">
+                            <span class="material-symbols-outlined text-primary text-2xl mb-4 block" style="font-variation-settings: 'FILL' 1">history_edu</span>
+                            <h5 class="font-semibold text-white text-sm mb-1.5">Full Audit Trail</h5>
+                            <p class="text-xs text-dim font-light leading-relaxed">Truy xuất nguồn gốc tương tác AI chi tiết.</p>
+                        </div>
+                    </div>
+
+                    <!-- Certification badges -->
+                    <div class="flex flex-wrap items-center gap-3 mt-10 reveal" data-delay="200">
+                        <span class="font-mono text-[10px] px-4 py-2.5 rounded-lg border border-edge/30 text-dim tracking-widest uppercase hover:border-primary/20 transition-colors cursor-default">Nghị định 13</span>
+                        <span class="font-mono text-[10px] px-4 py-2.5 rounded-lg border border-edge/30 text-dim tracking-widest uppercase hover:border-primary/20 transition-colors cursor-default">ISO 27001</span>
+                        <span class="font-mono text-[10px] px-4 py-2.5 rounded-lg border border-edge/30 text-dim tracking-widest uppercase hover:border-primary/20 transition-colors cursor-default">SOC2 Type II</span>
+                        <span class="font-mono text-[10px] px-4 py-2.5 rounded-lg border border-edge/30 text-dim tracking-widest uppercase hover:border-primary/20 transition-colors cursor-default">GDPR</span>
+                    </div>
+                </div>
+
+                <!-- Right: Testimonials -->
+                <div class="lg:col-span-6 flex flex-col justify-center">
+                    <div class="relative reveal" data-delay="100">
+                        <span class="font-heading text-[140px] leading-none text-edge/20 absolute -top-10 -left-4 select-none">"</span>
+
+                        <div class="relative z-10 pl-4 lg:pl-8">
+                            <p class="pull-quote">
+                                Steelab đã giải quyết bài toán khó nhất của chúng tôi: Làm sao để 5,000 nhân viên sử dụng ChatGPT mà không vi phạm quy định bảo mật dữ liệu ngân hàng.
+                            </p>
+                            <p class="pull-quote mt-4 text-accent/80">
+                                Giải pháp triển khai chỉ trong 2 tuần.
+                            </p>
+
+                            <div class="flex items-center gap-4 mt-10 pt-8 border-t border-edge/20">
+                                <img src="assets/avatar-cto.png" alt="Nguyen Minh Tuan"
+                                    class="w-14 h-14 rounded-full object-cover border-2 border-edge/30">
+                                <div>
+                                    <div class="font-semibold text-white">Nguyễn Minh Tuấn</div>
+                                    <div class="text-sm text-dim font-light">CTO, Ngân hàng Thương mại Quốc tế</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary testimonial -->
+                    <div class="mt-10 p-8 bg-deep rounded-xl border border-edge/20 card-lift reveal" data-delay="200">
+                        <p class="text-slate-400 text-sm italic font-light leading-relaxed">
+                            "Khả năng lọc PII thời gian thực của Steelab là ấn tượng nhất tôi từng thấy. Nó hoạt động mượt mà và không làm giảm hiệu suất."
+                        </p>
+                        <div class="flex items-center gap-3 mt-5">
+                            <img src="assets/avatar-security.png" alt="Le Hoang Nam"
+                                class="w-10 h-10 rounded-full object-cover border border-edge/30">
+                            <div>
+                                <div class="font-medium text-white text-sm">Lê Hoàng Nam</div>
+                                <div class="text-xs text-dim font-light">Giám đốc Bảo mật, Tập đoàn Viễn thông</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- COMPARISON TABLE                              -->
+    <!-- ============================================ -->
+    <section class="py-28 lg:py-40">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+            <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+                <span class="label text-accent tracking-[0.2em]">07 — So sánh</span>
+                <h2 class="font-heading text-3xl lg:text-[2.75rem] font-bold text-white mt-5">Tại sao chọn Steelab?</h2>
+                <p class="text-slate-400 mt-5 font-light lg:text-lg">So sánh giải pháp AI Gateway thế hệ mới với các phương thức truyền thống.</p>
+            </div>
+
+            <div class="overflow-x-auto reveal" data-delay="100">
+                <table class="compare-table w-full min-w-[640px]">
+                    <thead>
+                        <tr>
+                            <th class="w-[30%]">Tính năng</th>
+                            <th class="text-center highlight-col w-[25%]">
+                                <span class="text-primary font-semibold">Steelab</span>
+                            </th>
+                            <th class="text-center w-[22%]">DLP Truyền thống</th>
+                            <th class="text-center w-[22%]">Direct LLM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-surface-up/30 transition-colors">
+                            <td class="text-slate-300 text-sm font-medium">Khử định danh PII</td>
+                            <td class="text-center highlight-col">
+                                <span class="material-symbols-outlined text-emerald-400 text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>
+                            </td>
+                            <td class="text-center"><span class="text-dim text-xs">Hạn chế</span></td>
+                            <td class="text-center"><span class="material-symbols-outlined text-red-400/60 text-lg">close</span></td>
+                        </tr>
+                        <tr class="hover:bg-surface-up/30 transition-colors">
+                            <td class="text-slate-300 text-sm font-medium">Prompt Injection</td>
+                            <td class="text-center highlight-col">
+                                <span class="material-symbols-outlined text-emerald-400 text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>
+                            </td>
+                            <td class="text-center"><span class="material-symbols-outlined text-red-400/60 text-lg">close</span></td>
+                            <td class="text-center"><span class="material-symbols-outlined text-red-400/60 text-lg">close</span></td>
+                        </tr>
+                        <tr class="hover:bg-surface-up/30 transition-colors">
+                            <td class="text-slate-300 text-sm font-medium">Semantic AI</td>
+                            <td class="text-center highlight-col">
+                                <span class="material-symbols-outlined text-emerald-400 text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>
+                            </td>
+                            <td class="text-center"><span class="text-dim text-xs">Hạn chế</span></td>
+                            <td class="text-center"><span class="material-symbols-outlined text-red-400/60 text-lg">close</span></td>
+                        </tr>
+                        <tr class="hover:bg-surface-up/30 transition-colors">
+                            <td class="text-slate-300 text-sm font-medium">Tuân thủ NĐ13</td>
+                            <td class="text-center highlight-col">
+                                <span class="material-symbols-outlined text-emerald-400 text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>
+                            </td>
+                            <td class="text-center"><span class="text-dim text-xs">Hạn chế</span></td>
+                            <td class="text-center"><span class="material-symbols-outlined text-red-400/60 text-lg">close</span></td>
+                        </tr>
+                        <tr class="hover:bg-surface-up/30 transition-colors">
+                            <td class="text-slate-300 text-sm font-medium">Chi phí vận hành</td>
+                            <td class="text-center highlight-col">
+                                <span class="text-xs font-mono text-primary font-semibold">Tối ưu</span>
+                            </td>
+                            <td class="text-center"><span class="text-dim text-xs">Rất cao</span></td>
+                            <td class="text-center"><span class="text-dim text-xs">Thấp, rủi ro cao</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CTA — Dramatic, magnetic                      -->
+    <!-- ============================================ -->
+    <section class="py-20 lg:py-32 px-6">
+        <div class="max-w-5xl mx-auto relative">
+            <!-- Outer glow -->
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 blur-lg opacity-60"></div>
+
+            <div class="relative bg-surface rounded-3xl p-12 lg:p-24 border border-edge/30 overflow-hidden">
+                <!-- Background decorations -->
+                <div class="absolute top-0 right-0 w-80 h-80 bg-primary/[0.04] rounded-full -translate-y-1/2 translate-x-1/3 blur-[80px] pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 w-60 h-60 bg-accent/[0.03] rounded-full translate-y-1/2 -translate-x-1/3 blur-[60px] pointer-events-none"></div>
+
+                <!-- Subtle grid inside -->
+                <div class="absolute inset-0 opacity-[0.015] pointer-events-none rounded-3xl overflow-hidden"
+                    style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 40px 40px;">
+                </div>
+
+                <div class="relative z-10 max-w-2xl mx-auto text-center reveal">
+                    <span class="label text-accent tracking-[0.25em]">Bắt đầu ngay</span>
+                    <h2 class="font-heading text-4xl lg:text-6xl font-bold text-white mt-8 leading-[1.1]">
+                        30 ngày POC<br>miễn phí.
+                    </h2>
+                    <p class="text-slate-400 text-2xl font-heading italic mt-4">Không cam kết.</p>
+                    <p class="text-slate-400 mt-8 text-lg font-light max-w-lg mx-auto leading-relaxed">
+                        Sẵn sàng bảo vệ dữ liệu doanh nghiệp và khai phá tiềm năng AI không giới hạn?
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-12">
+                        <button class="btn-primary !px-12 !py-4 !text-base !rounded-xl">Đặt lịch POC ngay</button>
+                        <button class="btn-outline !px-12 !py-4 !text-base !rounded-xl">Tải Whitepaper</button>
+                    </div>
+                    <!-- Trust indicators -->
+                    <div class="flex flex-wrap justify-center gap-6 mt-10 pt-8 border-t border-edge/20">
+                        <span class="text-xs font-mono text-dim flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-emerald-400 text-sm" style="font-variation-settings: 'FILL' 1">check</span>
+                            Miễn phí 30 ngày
+                        </span>
+                        <span class="text-xs font-mono text-dim flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-emerald-400 text-sm" style="font-variation-settings: 'FILL' 1">check</span>
+                            Hỗ trợ kỹ thuật 24/7
+                        </span>
+                        <span class="text-xs font-mono text-dim flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-emerald-400 text-sm" style="font-variation-settings: 'FILL' 1">check</span>
+                            Triển khai &lt; 1 ngày
+                        </span>
+                    </div>
+                    <!-- Contact -->
+                    <div class="flex flex-wrap justify-center gap-6 mt-6">
+                        <a href="tel:0968667361" class="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 transition-colors duration-200">
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">phone</span>
+                            0968 667 361
+                        </a>
+                        <a href="mailto:contact@steellas.tech" class="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 transition-colors duration-200">
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">mail</span>
+                            contact@steellas.tech
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="pt-20 pb-10 px-6 lg:px-16 border-t border-edge/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+                <div class="col-span-2 lg:col-span-2 space-y-6">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-7 h-7 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1">shield_lock</span>
+                        </div>
+                        <span class="font-heading text-lg font-bold text-white tracking-tight">Steelab</span>
+                    </div>
+                    <p class="text-sm text-dim font-light max-w-xs leading-relaxed">
+                        Tiên phong trong các giải pháp bảo vệ dữ liệu và tuân thủ cho doanh nghiệp trong kỷ nguyên AI.
+                    </p>
+                    <div class="space-y-2.5">
+                        <a href="tel:0968667361" class="flex items-center gap-2.5 text-sm text-slate-400 hover:text-white transition-colors duration-200 group">
+                            <span class="material-symbols-outlined text-dim text-base group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 1">phone</span>
+                            0968 667 361
+                        </a>
+                        <a href="mailto:contact@steellas.tech" class="flex items-center gap-2.5 text-sm text-slate-400 hover:text-white transition-colors duration-200 group">
+                            <span class="material-symbols-outlined text-dim text-base group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 1">mail</span>
+                            contact@steellas.tech
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-5">
+                    <h6 class="label text-slate-300">Sản phẩm</h6>
+                    <ul class="space-y-3 text-sm text-dim font-light">
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">AI Gateway</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">DLP Engine</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">Audit Log</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">On-premise LLM</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h6 class="label text-slate-300">Giải pháp</h6>
+                    <ul class="space-y-3 text-sm text-dim font-light">
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">Ngân hàng &amp; Tài chính</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">Viễn thông</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">Y tế</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">Chính phủ</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h6 class="label text-slate-300">Hỗ trợ</h6>
+                    <ul class="space-y-3 text-sm text-dim font-light">
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">Tài liệu kỹ thuật</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">API Reference</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">Liên hệ hỗ trợ</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="#">Trạng thái hệ thống</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-divider mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-xs text-dim font-light">&copy; 2026 Steelab Security. Bảo lưu mọi quyền.</div>
+                <div class="flex gap-6 text-xs text-dim font-light">
+                    <a class="hover:text-white transition-colors duration-200" href="#">Điều khoản dịch vụ</a>
+                    <a class="hover:text-white transition-colors duration-200" href="#">Chính sách bảo mật</a>
+                    <a class="hover:text-white transition-colors duration-200" href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS                                       -->
+    <!-- ============================================ -->
+    <script>
+        // Custom scroll-triggered reveal (replaces AOS for lighter footprint)
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.dataset.delay || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, parseInt(delay));
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -60px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Smooth parallax for hero background elements
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    const heroBlobs = document.querySelectorAll('section:first-of-type .absolute > div');
+                    heroBlobs.forEach((blob, i) => {
+                        const speed = 0.03 + (i * 0.02);
+                        blob.style.transform = `translateY(${scrollY * speed}px)`;
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Close mobile nav on link click
+        document.querySelectorAll('#mobile-nav a, #mobile-nav button').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-nav').hidden = true;
+                document.querySelector('.hamburger').classList.remove('active');
+            });
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.style.borderBottomColor = 'rgba(30, 45, 68, 0.4)';
+            } else {
+                nav.style.borderBottomColor = 'rgba(30, 45, 68, 0.2)';
+            }
+        });
+    </script>
+</body>
+
+</html>
