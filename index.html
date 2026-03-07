@@ -103,11 +103,61 @@
             scroll-behavior: smooth;
         }
 
+        /* ====== THEME VARIABLES ====== */
+        html.dark {
+            --bg-deep:       #050a14;
+            --bg-surface:    #0c1322;
+            --bg-surface-up: #111b2e;
+            --bg-surface-bright: #182438;
+            --bg-edge:       #1e2d44;
+            --text-body:     #cbd5e1;
+            --text-heading:  #ffffff;
+            --text-muted:    #64748b;
+            --text-dim:      #3d4f66;
+            --text-mid:      #94a3b8;
+            --text-soft:     #475569;
+            --border-subtle: rgba(30,45,68,0.4);
+            --nav-bg:        rgba(5,10,20,0.75);
+            --terminal-bg:   #080d18;
+            --terminal-bar:  rgba(10,16,28,0.9);
+            --terminal-line: #141e30;
+            --card-bg:       #0c1322;
+            --card-hover:    #0f1829;
+            --scrollbar-track: #050a14;
+            --scrollbar-thumb: #1e2d44;
+            --grain-opacity: 0.022;
+        }
+
+        html.light {
+            --bg-deep:       #f8f9fc;
+            --bg-surface:    #ffffff;
+            --bg-surface-up: #f1f5fb;
+            --bg-surface-bright: #e8eef8;
+            --bg-edge:       #d1daea;
+            --text-body:     #374151;
+            --text-heading:  #0f172a;
+            --text-muted:    #9ca3af;
+            --text-dim:      #6b7280;
+            --text-mid:      #4b5563;
+            --text-soft:     #6b7280;
+            --border-subtle: rgba(209,218,234,0.8);
+            --nav-bg:        rgba(248,249,252,0.88);
+            --terminal-bg:   #f0f4fc;
+            --terminal-bar:  rgba(232,238,248,0.95);
+            --terminal-line: #dce5f0;
+            --card-bg:       #ffffff;
+            --card-hover:    #f1f5fb;
+            --scrollbar-track: #f1f5fb;
+            --scrollbar-thumb: #d1daea;
+            --grain-opacity: 0.012;
+        }
+
         body {
             font-family: 'Be Vietnam Pro', system-ui, sans-serif;
-            background: #050a14;
-            color: #cbd5e1;
+            background: var(--bg-deep);
+            color: var(--text-body);
             overflow-x: hidden;
+            transition: background 0.35s ease, color 0.35s ease;
         }
 
         /* --- Grain overlay --- */
@@ -117,7 +167,7 @@
             inset: 0;
             z-index: 9999;
             pointer-events: none;
-            opacity: 0.022;
+            opacity: var(--grain-opacity);
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
         }
 
@@ -136,8 +186,8 @@
 
         /* --- Custom scrollbar --- */
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #050a14; }
-        ::-webkit-scrollbar-thumb { background: #1e2d44; border-radius: 99px; }
+        ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+        ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 99px; }
         ::-webkit-scrollbar-thumb:hover { background: #2563eb; }
 
         /* --- Animations --- */
@@ -233,16 +283,18 @@
 
         /* --- Nav glass --- */
         .nav-glass {
-            background: rgba(5, 10, 20, 0.75);
+            background: var(--nav-bg);
             backdrop-filter: blur(20px) saturate(1.3);
             -webkit-backdrop-filter: blur(20px) saturate(1.3);
+            transition: background 0.35s ease;
         }
 
         /* --- Terminal window --- */
         .terminal {
-            background: #080d18;
-            border: 1px solid #1e2d44;
+            background: var(--terminal-bg);
+            border: 1px solid var(--bg-edge);
             font-family: 'JetBrains Mono', monospace;
+            transition: background 0.35s ease, border-color 0.35s ease;
         }
 
         .terminal-bar {
@@ -250,8 +302,9 @@
             align-items: center;
             gap: 6px;
             padding: 12px 16px;
-            border-bottom: 1px solid #141e30;
-            background: rgba(10, 16, 28, 0.9);
+            border-bottom: 1px solid var(--terminal-line);
+            background: var(--terminal-bar);
+            transition: background 0.35s ease, border-color 0.35s ease;
         }
 
         .terminal-dot {
@@ -267,7 +320,7 @@
             font-weight: 700;
             line-height: 1;
             color: transparent;
-            -webkit-text-stroke: 1px #1e2d44;
+            -webkit-text-stroke: 1px var(--bg-edge);
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -282,7 +335,7 @@
             font-style: italic;
             font-size: clamp(1.25rem, 2.5vw, 1.75rem);
             line-height: 1.6;
-            color: #e2e8f0;
+            color: var(--text-heading);
         }
 
         /* --- Buttons --- */
@@ -322,19 +375,19 @@
 
         .btn-outline {
             background: transparent;
-            color: #cbd5e1;
+            color: var(--text-body);
             padding: 14px 32px;
             font-weight: 500;
             font-size: 0.875rem;
             border-radius: 8px;
-            border: 1px solid #1e2d44;
+            border: 1px solid var(--bg-edge);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-outline:hover {
             border-color: #3b82f6;
             background: rgba(37, 99, 235, 0.06);
-            color: white;
+            color: var(--text-heading);
             transform: translateY(-2px);
         }
 
@@ -346,12 +399,12 @@
         }
 
         .bento-grid > * {
-            background: #0c1322;
+            background: var(--card-bg);
             transition: background 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .bento-grid > *:hover {
-            background: #0f1829;
+            background: var(--card-hover);
         }
 
         @media (max-width: 768px) {
@@ -369,7 +422,7 @@
         .compare-table td {
             padding: 20px 24px;
             text-align: left;
-            border-bottom: 1px solid #141e30;
+            border-bottom: 1px solid var(--terminal-line);
         }
 
         .compare-table thead th {
@@ -377,7 +430,7 @@
             font-size: 0.6875rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: #64748b;
+            color: var(--text-muted);
             font-weight: 500;
         }
 
@@ -390,7 +443,7 @@
         /* --- Section divider with glow --- */
         .section-divider {
             height: 1px;
-            background: linear-gradient(90deg, transparent, #1e2d44 20%, #2563eb33 50%, #1e2d44 80%, transparent);
+            background: linear-gradient(90deg, transparent, var(--bg-edge) 20%, #2563eb33 50%, var(--bg-edge) 80%, transparent);
             position: relative;
         }
 
@@ -403,7 +456,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #1e2d44;
+            background: var(--bg-edge);
             border: 1px solid #2563eb33;
         }
 
@@ -412,9 +465,14 @@
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
         }
 
-        .card-lift:hover {
+        html.dark .card-lift:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(37, 99, 235, 0.05);
+        }
+
+        html.light .card-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 0 40px rgba(37, 99, 235, 0.08);
         }
 
         /* --- Animated underline for nav --- */
@@ -478,11 +536,11 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #1e2d44);
+            background: linear-gradient(90deg, transparent, var(--bg-edge));
         }
 
         .labeled-rule::after {
-            background: linear-gradient(90deg, #1e2d44, transparent);
+            background: linear-gradient(90deg, var(--bg-edge), transparent);
         }
 
         /* --- Mobile hamburger --- */
@@ -490,7 +548,7 @@
             display: block;
             width: 18px;
             height: 1.5px;
-            background: #94a3b8;
+            background: var(--text-mid);
             transition: all 0.3s ease;
             border-radius: 2px;
         }
@@ -516,6 +574,76 @@
             display: block;
         }
 
+        /* --- Theme toggle button --- */
+        .theme-toggle {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            border: 1px solid var(--bg-edge);
+            background: var(--bg-surface-up);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-toggle:hover {
+            border-color: #2563eb;
+            background: rgba(37, 99, 235, 0.08);
+            transform: scale(1.05);
+        }
+
+        .theme-toggle .icon-sun,
+        .theme-toggle .icon-moon {
+            position: absolute;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        html.dark .theme-toggle .icon-sun {
+            opacity: 0;
+            transform: rotate(90deg) scale(0.5);
+        }
+
+        html.dark .theme-toggle .icon-moon {
+            opacity: 1;
+            transform: rotate(0) scale(1);
+        }
+
+        html.light .theme-toggle .icon-sun {
+            opacity: 1;
+            transform: rotate(0) scale(1);
+        }
+
+        html.light .theme-toggle .icon-moon {
+            opacity: 0;
+            transform: rotate(-90deg) scale(0.5);
+        }
+
+        /* --- Light mode section overrides --- */
+        html.light .glow-primary {
+            box-shadow: 0 0 60px rgba(37, 99, 235, 0.08), 0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        html.light .gradient-text {
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #92400e 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Light mode hero background blobs */
+        html.light .hero-blob-primary { background: rgba(37, 99, 235, 0.04); }
+        html.light .hero-blob-accent  { background: rgba(201, 168, 76, 0.03); }
+
+        /* Light mode grid pattern */
+        html.light .grid-pattern {
+            background-image: linear-gradient(#00000008 1px, transparent 1px), linear-gradient(90deg, #00000008 1px, transparent 1px) !important;
+        }
+
         /* reduce motion */
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -525,6 +653,86 @@
             .reveal { opacity: 1; transform: none; }
             .hero-reveal { opacity: 1; transform: none; }
         }
+
+        /* ====== LIGHT MODE TAILWIND OVERRIDES ====== */
+        /* Text colors */
+        html.light .text-white { color: #0f172a !important; }
+        html.light .text-slate-300 { color: #374151 !important; }
+        html.light .text-slate-400 { color: #4b5563 !important; }
+        html.light .text-slate-500 { color: #6b7280 !important; }
+        html.light .text-dim { color: #9ca3af !important; }
+
+        /* Background colors */
+        html.light .bg-deep { background-color: #f8f9fc !important; }
+        html.light .bg-deep\/95 { background-color: rgba(248,249,252,0.95) !important; }
+        html.light .bg-surface { background-color: #ffffff !important; }
+        html.light .bg-surface-up { background-color: #f1f5fb !important; }
+        html.light .bg-surface-bright { background-color: #e8eef8 !important; }
+        html.light .bg-edge\/20 { background-color: rgba(209,218,234,0.2) !important; }
+        html.light .bg-edge\/40 { background-color: rgba(209,218,234,0.4) !important; }
+
+        /* Border colors */
+        html.light .border-edge { border-color: #d1daea !important; }
+        html.light .border-edge\/20 { border-color: rgba(209,218,234,0.2) !important; }
+        html.light .border-edge\/30 { border-color: rgba(209,218,234,0.3) !important; }
+        html.light .border-edge\/40 { border-color: rgba(209,218,234,0.4) !important; }
+
+        /* Gradient fades for marquee */
+        html.light .from-deep { --tw-gradient-from: #f8f9fc !important; }
+        html.light .from-deep.to-transparent { background: linear-gradient(to right, #f8f9fc, transparent) !important; }
+
+        /* Hero atmosphere */
+        html.light section > .absolute .bg-primary\/\[0\.06\] { background-color: rgba(37,99,235,0.05) !important; }
+        html.light section > .absolute .bg-accent\/\[0\.035\] { background-color: rgba(201,168,76,0.025) !important; }
+
+        /* Terminal in light mode */
+        html.light .terminal .text-slate-300 { color: #374151 !important; }
+        html.light .terminal .text-slate-500 { color: #6b7280 !important; }
+
+        /* Cards in light mode */
+        html.light .bg-surface.border { border-color: #d1daea !important; }
+
+        /* Marquee text partners */
+        html.light .text-dim\/30 { color: rgba(107,114,128,0.5) !important; }
+        html.light .text-dim\/30:hover { color: rgba(107,114,128,0.8) !important; }
+
+        /* Compare table - highlight col */
+        html.light .compare-table .highlight-col {
+            background: rgba(37, 99, 235, 0.03) !important;
+        }
+
+        /* Floating badges */
+        html.light .shadow-2xl { box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 4px 20px rgba(0,0,0,0.06) !important; }
+
+        /* Section backgrounds */
+        html.light section.bg-surface {
+            background: linear-gradient(180deg, #f1f5fb 0%, #ffffff 100%) !important;
+        }
+
+        /* Nav border on scroll - light */
+        html.light nav { border-bottom-color: rgba(209,218,234,0.4) !important; }
+
+        /* Footer */
+        html.light footer { background: #f1f5fb !important; }
+
+        /* Section divider */
+        html.light .section-divider {
+            background: linear-gradient(90deg, transparent, #d1daea 20%, rgba(37,99,235,0.15) 50%, #d1daea 80%, transparent) !important;
+        }
+        html.light .section-divider::after {
+            background: #d1daea !important;
+        }
+
+        /* Gradient to-b for scroll indicator */
+        html.light .from-edge { --tw-gradient-from: #d1daea !important; }
+
+        /* Fix bg-primary/[x] in light mode (keep same) */
+
+        /* Testimonials */
+        html.light .bg-surface-bright { background-color: #e8eef8 !important; }
+
+        /* Stats numbers */
+        html.light .text-3xl.font-heading.font-bold.text-white { color: #0f172a !important; }
     </style>
 </head>
 
@@ -550,8 +758,15 @@
                 <a class="nav-link text-[13px] font-medium text-slate-400 hover:text-white transition-colors duration-200" href="#tai-lieu">Tài liệu</a>
             </div>
 
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3">
                 <a href="#" class="hidden md:block text-[13px] font-medium text-slate-400 hover:text-white transition-colors">Đăng nhập</a>
+
+                <!-- Theme toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ sáng/tối">
+                    <span class="material-symbols-outlined icon-sun text-[18px] text-amber-500" style="font-variation-settings: 'FILL' 1">light_mode</span>
+                    <span class="material-symbols-outlined icon-moon text-[18px] text-slate-300" style="font-variation-settings: 'FILL' 1">dark_mode</span>
+                </button>
+
                 <button class="btn-primary text-[13px] !py-2.5 !px-5 hidden sm:inline-flex">Đặt lịch POC</button>
                 <!-- Mobile hamburger -->
                 <button class="lg:hidden hamburger flex flex-col gap-1.5 p-2" onclick="this.classList.toggle('active'); const nav = document.getElementById('mobile-nav'); nav.hidden = !nav.hidden;" aria-label="Menu">
