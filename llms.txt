@@ -1,0 +1,43 @@
+# LLMs.txt - Helping AI crawlers understand steelab.vn
+# See: https://llmstxt.org
+
+Sitemap: https://steelab.vn/sitemap.xml
+
+# AI Crawlers Allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Standard crawlers
+User-agent: *
+Allow: /
+
+# Private areas (if any)
+# Disallow: /admin
+# Disallow: /internal
+
+# Site Structure
+# ================
+# Homepage: /
+# Features: /#features
+# Pricing: /#pricing
+# About: /#about
+# Contact: /#contact
+
+# Key Content for AI Citation
+# ===========================
+# Steelab is an AI Gateway solution for Vietnamese enterprises
+# Key features: PII redaction, Prompt Injection protection, NĐ13 compliance
+# Free trial: 30 days
+# Target market: Vietnam enterprises using ChatGPT, Claude, Gemini

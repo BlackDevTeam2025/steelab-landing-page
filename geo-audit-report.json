@@ -1,0 +1,22 @@
+{
+  "folder": "D:\\steelab-landing-page",
+  "files_audited": 2,
+  "pages": [
+    {
+      "file": "index.html",
+      "error": "missing ), unterminated subpattern at position 6"
+    },
+    {
+      "file": "index.html",
+      "error": "missing ), unterminated subpattern at position 6"
+    }
+  ],
+  "overall_score": 0.0,
+  "recommendations": [
+    "🔴 Ưu tiên cao: Thêm meta description cho tất cả trang",
+    "🟡 Thêm Schema.org markup (LocalBusiness hoặc SoftwareApplication)",
+    "🟡 Thêm thông tin tác giả/about để tăng E-E-A-T",
+    "📄 Tạo file llms.txt để giúp AI crawlers hiểu site structure",
+    "🔍 Kiểm tra robots.txt cho phép AI crawlers (GPTBot, ClaudeBot)"
+  ]
+}
