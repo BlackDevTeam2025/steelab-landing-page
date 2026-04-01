@@ -180,7 +180,7 @@
     <!-- ============================================ -->
     <nav class="fixed top-0 w-full z-50 nav-glass border-b border-edge/20">
         <div class="max-w-7xl mx-auto px-6 lg:px-16 h-[72px] flex items-center justify-between">
-            <a href="#" class="flex items-center gap-2.5 group">
+            <a href="index.html" class="flex items-center gap-2.5 group">
                 <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                     <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings: 'FILL' 1">shield_lock</span>
                 </div>
@@ -196,7 +196,7 @@
             </div>
 
             <div class="flex items-center gap-3">
-                <a href="#" class="hidden md:block text-[13px] font-medium text-slate-400 hover:text-white transition-colors">Đăng nhập</a>
+                <a href="mailto:contact@cmdsoft.com.vn" class="hidden md:block text-[13px] font-medium text-slate-400 hover:text-white transition-colors">Đăng nhập</a>
 
                 <!-- Theme toggle -->
                 <button class="theme-toggle" id="theme-toggle" aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ sáng/tối">
@@ -204,7 +204,7 @@
                     <span class="material-symbols-outlined icon-moon text-[18px] text-slate-300" style="font-variation-settings: 'FILL' 1">dark_mode</span>
                 </button>
 
-                <button class="btn-primary text-[13px] !py-2.5 !px-5 hidden sm:inline-flex">Đặt lịch POC</button>
+                <a href="demo.html" class="btn-primary text-[13px] !py-2.5 !px-5 hidden sm:inline-flex">Đặt lịch POC</a>
                 <!-- Mobile hamburger -->
                 <button class="lg:hidden hamburger flex flex-col gap-1.5 p-2" onclick="this.classList.toggle('active'); const nav = document.getElementById('mobile-nav'); nav.hidden = !nav.hidden;" aria-label="Menu">
                     <span></span>
@@ -221,7 +221,7 @@
                 <a class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-edge/20" href="#giai-phap">Giải pháp</a>
                 <a class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-edge/20" href="#tuan-thu">Tuân thủ NĐ13</a>
                 <a class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-edge/20" href="#tai-lieu">Tài liệu</a>
-                <button class="btn-primary text-sm w-full mt-2 sm:hidden">Đặt lịch POC</button>
+                <a href="demo.html" class="btn-primary text-sm w-full mt-2 sm:hidden">Đặt lịch POC</a>
             </div>
         </div>
     </nav>
@@ -912,8 +912,7 @@
                         Sẵn sàng bảo vệ dữ liệu doanh nghiệp và khai phá tiềm năng AI không giới hạn?
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center gap-4 mt-12">
-                        <button class="btn-primary !px-12 !py-4 !text-base !rounded-xl">Đặt lịch POC ngay</button>
-                        <button class="btn-outline !px-12 !py-4 !text-base !rounded-xl">Tải Whitepaper</button>
+                        <a href="demo.html" class="btn-primary !px-12 !py-4 !text-base !rounded-xl">Đặt lịch POC ngay</a>
                     </div>
                     <!-- Trust indicators -->
                     <div class="flex flex-wrap justify-center gap-6 mt-10 pt-8 border-t border-edge/20">
@@ -951,6 +950,18 @@
     </section>
 
     <!-- ============================================ -->
+    <!-- BACK TO TOP                                    -->
+    <!-- ============================================ -->
+    <button id="back-to-top" aria-label="Quay về đầu trang"
+        class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-xl bg-primary border border-primary/30 flex items-center justify-center
+               text-white shadow-lg shadow-primary/25 opacity-0 translate-y-4 pointer-events-none
+               transition-all duration-400 hover:bg-primary/90 hover:scale-110 hover:shadow-xl hover:shadow-primary/35
+               focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer"
+        style="transition: opacity 0.35s ease, transform 0.35s ease, background 0.2s ease, box-shadow 0.2s ease;">
+        <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">keyboard_arrow_up</span>
+    </button>
+
+    <!-- ============================================ -->
     <!-- FOOTER                                        -->
     <!-- ============================================ -->
     <footer class="pt-20 pb-10 px-6 lg:px-16 border-t border-edge/20">
@@ -980,28 +991,28 @@
                 <div class="space-y-5">
                     <h6 class="label text-slate-300">Sản phẩm</h6>
                     <ul class="space-y-3 text-sm text-dim font-light">
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">AI Gateway</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">DLP Engine</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">Audit Log</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">On-premise LLM</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="index.html#san-pham">AI Gateway</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="demo.html">Live Demo</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="demo.html">PII Redaction</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="demo.html">Prompt Injection</a></li>
                     </ul>
                 </div>
                 <div class="space-y-5">
                     <h6 class="label text-slate-300">Giải pháp</h6>
                     <ul class="space-y-3 text-sm text-dim font-light">
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">Ngân hàng &amp; Tài chính</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">Viễn thông</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">Y tế</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">Chính phủ</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="index.html#giai-phap">Ngân hàng &amp; Tài chính</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="index.html#giai-phap">Viễn thông</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="index.html#giai-phap">Y tế</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="index.html#giai-phap">Chính phủ</a></li>
                     </ul>
                 </div>
                 <div class="space-y-5">
                     <h6 class="label text-slate-300">Hỗ trợ</h6>
                     <ul class="space-y-3 text-sm text-dim font-light">
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">Tài liệu kỹ thuật</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">API Reference</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">Liên hệ hỗ trợ</a></li>
-                        <li><a class="hover:text-white transition-colors duration-200" href="#">Trạng thái hệ thống</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="mailto:contact@cmdsoft.com.vn">Liên hệ hỗ trợ</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="tel:0943656469">Hotline: 0943 65 64 69</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="index.html#tai-lieu">Tài liệu kỹ thuật</a></li>
+                        <li><a class="hover:text-white transition-colors duration-200" href="mailto:contact@cmdsoft.com.vn">Email liên hệ</a></li>
                     </ul>
                 </div>
             </div>
@@ -1011,9 +1022,9 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="text-xs text-dim font-light">&copy; @2022 - 2026 CMD Security. Bảo lưu mọi quyền.</div>
                 <div class="flex gap-6 text-xs text-dim font-light">
-                    <a class="hover:text-white transition-colors duration-200" href="#">Điều khoản dịch vụ</a>
-                    <a class="hover:text-white transition-colors duration-200" href="#">Chính sách bảo mật</a>
-                    <a class="hover:text-white transition-colors duration-200" href="#">Cookie Policy</a>
+                    <a class="hover:text-white transition-colors duration-200" href="mailto:contact@cmdsoft.com.vn">Điều khoản dịch vụ</a>
+                    <a class="hover:text-white transition-colors duration-200" href="mailto:contact@cmdsoft.com.vn">Chính sách bảo mật</a>
+                    <a class="hover:text-white transition-colors duration-200" href="mailto:contact@cmdsoft.com.vn">Cookie Policy</a>
                 </div>
             </div>
         </div>
@@ -1080,7 +1091,7 @@
 
         // Theme Toggle Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
-        
+
         themeToggleBtn.addEventListener('click', () => {
             if (document.documentElement.classList.contains('light')) {
                 document.documentElement.classList.remove('light');
@@ -1091,6 +1102,24 @@
                 document.documentElement.classList.add('light');
                 localStorage.theme = 'light';
             }
+        });
+
+        // Back to top
+        const bttBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                bttBtn.style.opacity = '1';
+                bttBtn.style.transform = 'translateY(0)';
+                bttBtn.style.pointerEvents = 'auto';
+            } else {
+                bttBtn.style.opacity = '0';
+                bttBtn.style.transform = 'translateY(16px)';
+                bttBtn.style.pointerEvents = 'none';
+            }
+        }, { passive: true });
+
+        bttBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
