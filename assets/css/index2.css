@@ -39,6 +39,11 @@ html.dark .glass-nav {
 .glass-nav .no-scrollbar a {
     flex: 0 0 auto;
 }
+#portfolio-filters .filter-btn,
+#portfolio-filters-v2 .filter-btn,
+#use-case-tabs .use-tab {
+    flex: 0 0 auto;
+}
 @media (max-width: 900px) {
     .glass-nav .max-w-7xl {
         gap: 0.7rem !important;
@@ -161,25 +166,37 @@ html.dark .glass-nav {
 #kien-truc .border-white\/10 {
     border-color: rgba(148, 163, 184, 0.35) !important;
 }
-footer {
-    background-color: #f8fafc !important;
-    border-color: rgba(148, 163, 184, 0.35) !important;
+#lien-he {
+    background-color: rgb(0 80 203 / var(--tw-bg-opacity, 1)) !important;
+    border-color: rgba(186, 230, 253, 0.8) !important;
 }
-footer .text-white {
-    color: #0f172a !important;
+#lien-he .label,
+#lien-he .text-white {
+    color: #ffffff !important;
 }
-footer .text-dim {
-    color: #475569 !important;
+#lien-he .text-white\/90,
+#lien-he .text-white\/80,
+#lien-he .text-dim {
+    color: rgba(255, 255, 255, 0.92) !important;
 }
-footer .hover\:text-white:hover {
-    color: #0f172a !important;
+#lien-he a {
+    color: rgba(255, 255, 255, 0.92) !important;
 }
-footer .bg-surface-container-low {
-    background-color: #ffffff !important;
+#lien-he a:hover {
+    color: #ffffff !important;
 }
-footer .border-edge\/30,
-footer .border-edge\/20 {
-    border-color: rgba(148, 163, 184, 0.35) !important;
+#lien-he .bg-surface-container-low,
+#lien-he .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.14) !important;
+}
+#lien-he .border-edge\/30,
+#lien-he .border-edge\/20,
+#lien-he .border-white\/20,
+#lien-he .border-white\/25 {
+    border-color: rgba(255, 255, 255, 0.35) !important;
+}
+#lien-he .material-symbols-outlined {
+    color: #ffffff !important;
 }
 
 /* ===== Portfolio cards ===== */
@@ -548,10 +565,7 @@ html.dark .hover\:bg-surface-container-low:hover { background-color: #111b2e !im
 html.dark .bg-primary { background-color: #0050cb !important; }
 
 /* ===== Dark mode footer fix ===== */
-html.dark footer { background-color: #050a14 !important; border-color: #1e2d44 !important; }
-html.dark footer .text-slate-900 { color: #e2e8f0 !important; }
-html.dark footer .text-slate-500 { color: #94a3b8 !important; }
-html.dark footer .border-slate-200 { border-color: #1e2d44 !important; }
+html.dark #lien-he { background-color: rgb(0 80 203 / var(--tw-bg-opacity, 1)) !important; border-color: rgba(186, 230, 253, 0.8) !important; }
 
 /* ===== Trusted Partners fade overlays dark mode ===== */
 html.dark .bg-gradient-to-r { --tw-gradient-from: #0c1322; }

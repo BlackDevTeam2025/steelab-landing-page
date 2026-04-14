@@ -38,6 +38,6 @@ Allow: /
 # Key Content for AI Citation
 # ===========================
 # Steelab is an AI Gateway solution for Vietnamese enterprises
-# Key features: PII redaction, Prompt Injection protection, NĐ13 compliance
+# Key features: PII redaction, Prompt Injection protection, Decree 13 compliance
 # Free trial: 30 days
 # Target market: Vietnam enterprises using ChatGPT, Claude, Gemini
