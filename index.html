@@ -108,66 +108,56 @@
 
 <body class="bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 glass-nav shadow-[0px_20px_40px_rgba(11,28,48,0.06)]">
-        <div class="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex items-center gap-4 md:gap-6">
-            <a href="#trang-chu" class="shrink-0 inline-flex items-center" aria-label="Steelab - Home">
-                <img src="img/logo2.png" class="h-8 md:h-9 w-auto object-contain" alt="Steelab logo">
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-2.5 flex items-center gap-4 md:gap-6 nav-inner">
+            <a href="#trang-chu" class="shrink-0 nav-brand inline-flex items-center" aria-label="Steelab - Home">
+                <img src="img/logo.png" class="h-8 md:h-9 w-auto object-contain" alt="Steelab logo">
             </a>
-            <div class="flex-1 min-w-0 flex items-center justify-start md:justify-center gap-1 md:gap-3 overflow-x-auto whitespace-nowrap no-scrollbar px-1">
-                <a class="px-2.5 md:px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all font-label"
-                    href="#trang-chu">Home</a>
-                <a class="px-2.5 md:px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all font-label"
-                    href="#giai-phap">Solutions</a>
-                <a class="px-2.5 md:px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all font-label"
-                    href="#du-an">Projects</a>
-                <a class="px-2.5 md:px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all font-label"
-                    href="#linh-vuc">Industries</a>
-                <a class="px-2.5 md:px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all font-label"
-                    href="#kien-truc">Architecture</a>
-                <a class="px-2.5 md:px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all font-label"
-                    href="#lien-he">Contact</a>
+            <div class="nav-links flex-1 min-w-0 flex items-center justify-start md:justify-center gap-1 md:gap-3 overflow-x-auto whitespace-nowrap no-scrollbar px-1">
+                <a class="nav-link" href="#trang-chu">Home</a>
+                <a class="nav-link" href="#giai-phap">Solutions</a>
+                <a class="nav-link" href="#du-an">Projects</a>
+                <a class="nav-link" href="#linh-vuc">Industries</a>
+                <a class="nav-link" href="#kien-truc">Architecture</a>
+                <a class="nav-link" href="Portfolio-Steelab.pdf" target="_blank" rel="noopener noreferrer">Portfolio</a>
             </div>
-            <a
-                href="#lien-he"
-                class="hidden md:inline-flex shrink-0 bg-primary text-on-primary px-6 py-2.5 rounded-lg text-sm font-semibold hover:scale-95 duration-200 ease-in-out cursor-pointer focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2">
-                Contact
-            </a>
+            <div class="hidden lg:flex items-center gap-3 nav-cta-group">
+                <a href="#lien-he" class="nav-cta">
+                    <span>Contact Us</span>
+                    <span class="nav-cta-icon material-symbols-outlined">north_east</span>
+                </a>
+            </div>
         </div>
     </nav>
-    <main class="pt-24">
+    <main class="main-content">
         <!-- Hero Section -->
-        <section id="trang-chu" class="anchor-target relative overflow-hidden bg-surface px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-32">
-            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-                <div class="z-10">
-                    <span
-                        class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase text-primary bg-primary-fixed rounded-full font-label">
-                        Enterprise AI Security
-                    </span>
-                    <h1
-                        class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-on-background leading-[1.1] mb-8 tracking-tight">
-                        Secure <span class="text-primary">AI &amp; Automation</span> for Enterprise Scale
-                    </h1>
-                    <div class="text-base sm:text-lg text-on-surface-variant mb-10 leading-relaxed max-w-2xl space-y-4">
-                        <p>Steelab Tech is a young tech startup based in Vietnam, focusing on developing software solutions powered by AI. With a small team of around 10 passionate members, we continuously learn and improve to deliver practical and high-quality products.</p>
-                        <p>We offer services in AI/Machine Learning and Web/App/Game development, while gradually expanding our capabilities in emerging technologies. So far, we have contributed to and completed around 50 projects across various industries.</p>
-                        <p>Although we are a small team, we are committed to working with dedication, flexibility, and a strong desire to become a reliable partner in our clients' technology journey.</p>
-                    </div>
-                    <div class="flex flex-wrap gap-4">
-                        <a
-                            href="#lien-he"
-                            class="hero-gradient w-full sm:w-auto inline-flex items-center justify-center text-white px-8 py-4 rounded-lg font-bold shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform cursor-pointer focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
-                            Contact
-                        </a>
-                    </div>
+        <section id="trang-chu" class="anchor-target hero-tech relative overflow-hidden px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-28">
+            <div class="hero-tech-overlay"></div>
+            <div class="hero-tech-glow"></div>
+            <div class="max-w-6xl mx-auto relative z-10 text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6">
+                    Secure AI &amp; Automation for Enterprise Scale
+                </h1>
+                <div class="max-w-4xl mx-auto text-base sm:text-lg text-blue-100/95 leading-relaxed mb-8 space-y-4">
+                    <p>Steelab Tech is a young tech startup based in Vietnam, focusing on developing software solutions powered by AI. With a small team of around 10 passionate members, we continuously learn and improve to deliver practical and high-quality products.</p>
+                    <p>We offer services in AI/Machine Learning and Web/App/Game development, while gradually expanding our capabilities in emerging technologies. So far, we have contributed to and completed around 50 projects across various industries.</p>
+                    <p>Although we are a small team, we are committed to working with dedication, flexibility, and a strong desire to become a reliable partner in our clients' technology journey.</p>
                 </div>
-                <div class="relative">
-                    <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-                    <div
-                        class="relative bg-surface-container-lowest p-4 rounded-xl shadow-2xl border border-outline-variant/10">
-                        <img alt="Steelab platform interface" class="rounded-lg"
-                            data-alt="Steelab platform dashboard interface"
-                            src="img/team.png" />
-                    </div>
+                <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">deployed_code</span>Blockchain</span>
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">neurology</span>AI</span>
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">sports_esports</span>Game</span>
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">groups</span>Consultant</span>
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">apps</span>Software</span>
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">language</span>Web</span>
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">smartphone</span>Mobile</span>
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">task_alt</span>QA testing</span>
+                    <span class="hero-skill-pill"><span class="material-symbols-outlined text-base">cloud</span>Cloud</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="Portfolio-Steelab.pdf" target="_blank" rel="noopener noreferrer" class="hero-cta-btn">
+                        Our Portfolio <span class="material-symbols-outlined">arrow_outward</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -962,90 +952,46 @@
         <span class="material-symbols-outlined text-xl">arrow_upward</span>
     </button>
 
-    <div id="demo-modal" class="hidden fixed inset-0 z-[80]" aria-hidden="true">
-        <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" data-demo-close></div>
-        <div class="relative min-h-full flex items-center justify-center p-5">
-            <div class="demo-modal-card w-full max-w-xl rounded-2xl p-6 md:p-8">
-                <div class="flex items-start justify-between gap-4 mb-5">
-                    <div>
-                        <h3 class="text-2xl font-bold text-on-background">Book a Demo</h3>
-                        <p class="text-on-surface-variant mt-1">Share your details and our team will contact you shortly to discuss your AI security roadmap.</p>
-                    </div>
-                    <button type="button" data-demo-close class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-low transition-colors">
-                        <span class="material-symbols-outlined text-base">close</span>
-                    </button>
-                </div>
-
-                <form id="demo-form" class="space-y-4">
-                    <div>
-                        <label for="demo-name" class="block text-sm font-semibold text-on-background mb-1.5">Full name</label>
-                        <input id="demo-name" name="name" type="text" required placeholder="Enter your full name"
-                            class="w-full rounded-xl border border-outline-variant bg-white px-4 py-3 text-on-background focus:border-primary focus:ring-0" />
-                    </div>
-                    <div>
-                        <label for="demo-phone" class="block text-sm font-semibold text-on-background mb-1.5">Phone number</label>
-                        <input id="demo-phone" name="phone" type="tel" required placeholder="Example: +84 901 234 567"
-                            class="w-full rounded-xl border border-outline-variant bg-white px-4 py-3 text-on-background focus:border-primary focus:ring-0" />
-                    </div>
-                    <div>
-                        <label for="demo-need" class="block text-sm font-semibold text-on-background mb-1.5">Project requirements</label>
-                        <textarea id="demo-need" name="need" rows="4" required placeholder="Describe your AI use case, security requirements, and timeline"
-                            class="w-full rounded-xl border border-outline-variant bg-white px-4 py-3 text-on-background focus:border-primary focus:ring-0"></textarea>
-                    </div>
-
-                    <div class="pt-2 flex flex-wrap justify-end gap-3">
-                        <button type="button" data-demo-close
-                            class="px-5 py-2.5 rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-low transition-colors">Close</button>
-                        <button type="submit"
-                            class="px-6 py-2.5 rounded-lg bg-primary text-white font-semibold hover:bg-blue-700 transition-colors">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <!-- Footer -->
     <footer id="lien-he" class="anchor-target bg-sky-500 border-t border-sky-400/40 text-white w-full pt-20 pb-10 px-4 sm:px-6 md:px-8">
-        <div class="max-w-7xl mx-auto">
+        <div class="w-full">
             <!-- Main grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 sm:gap-12 mb-14">
                 <!-- Brand column -->
                 <div class="col-span-2 lg:col-span-2 space-y-6">
                     <!-- Logo -->
-                    <div class="flex items-center gap-2.5">
-                        <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
-                            <span class="material-symbols-outlined text-white text-base" style="font-variation-settings:'FILL'1">shield_lock</span>
-                        </div>
-                        <span class="font-heading text-xl font-bold text-white tracking-tight">Steelab</span>
+                    <div class="inline-flex items-center bg-white/95 rounded-xl px-3 py-2 shadow-[0_8px_24px_rgba(15,23,42,0.18)]">
+                        <img src="img/logo.png" alt="Steelab logo" class="h-9 sm:h-10 w-auto object-contain footer-brand-logo" />
                     </div>
                     <p class="text-sm text-white/90 font-light max-w-xs leading-relaxed">
                         Building secure, compliant, and production-ready AI systems for enterprises operating in regulated environments.
                     </p>
                     <!-- Contact info -->
                     <div class="space-y-3">
-                        <a href="tel:0968667361" class="flex items-center gap-2.5 text-sm text-white/90 hover:text-white transition-colors duration-200 group">
+                        <a href="tel:0968667361" class="footer-contact-row flex items-center gap-2.5 text-sm text-white/90 hover:text-white transition-colors duration-200 group">
                             <span class="material-symbols-outlined text-white/80 text-base group-hover:text-white transition-colors" style="font-variation-settings:'FILL'1">phone</span>
                             0968 667 361
                         </a>
-                        <a href="mailto:contact@steelab.vn" class="flex items-center gap-2.5 text-sm text-white/90 hover:text-white transition-colors duration-200 group">
+                        <a href="mailto:contact@steelab.vn" class="footer-contact-row flex items-center gap-2.5 text-sm text-white/90 hover:text-white transition-colors duration-200 group">
                             <span class="material-symbols-outlined text-white/80 text-base group-hover:text-white transition-colors" style="font-variation-settings:'FILL'1">mail</span>
                             contact@steellabs.tech
                         </a>
-                        <div class="flex items-center gap-2.5 text-sm text-white/90">
+                        <div class="footer-contact-row flex items-center gap-2.5 text-sm text-white/90">
                             <span class="material-symbols-outlined text-white/80 text-base" style="font-variation-settings:'FILL'1">location_on</span>
                             Hanoi, Vietnam
                         </div>
                     </div>
                     <!-- Social links -->
                     <div class="flex gap-3">
-                        <a class="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white text-white/90 transition-all duration-200 cursor-pointer"
+                        <a class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white text-white/90 transition-all duration-200 cursor-pointer"
                             href="#" title="LinkedIn" aria-label="LinkedIn">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </a>
-                        <a class="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white text-white/90 transition-all duration-200 cursor-pointer"
+                        <a class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white text-white/90 transition-all duration-200 cursor-pointer"
                             href="#" title="Facebook" aria-label="Facebook">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
-                        <a class="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white text-white/90 transition-all duration-200 cursor-pointer"
+                        <a class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 hover:border-white text-white/90 transition-all duration-200 cursor-pointer"
                             href="#" title="GitHub" aria-label="GitHub">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                         </a>
@@ -1294,53 +1240,6 @@
         });
     })();
 
-    // Demo modal
-    (function(){
-        const modal = document.getElementById('demo-modal');
-        if (!modal) return;
-
-        const openButtons = Array.from(document.querySelectorAll('[data-open-demo]'));
-        const closeButtons = Array.from(modal.querySelectorAll('[data-demo-close]'));
-        const form = document.getElementById('demo-form');
-
-        function openModal() {
-            modal.classList.remove('hidden');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            modal.classList.add('hidden');
-            modal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-
-        openButtons.forEach(function(btn){
-            btn.addEventListener('click', openModal);
-        });
-        closeButtons.forEach(function(btn){
-            btn.addEventListener('click', closeModal);
-        });
-
-        document.addEventListener('keydown', function(e){
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModal();
-            }
-        });
-
-        if (form) {
-            form.addEventListener('submit', function(e){
-                e.preventDefault();
-                const name = form.elements.namedItem('name').value.trim();
-                const phone = form.elements.namedItem('phone').value.trim();
-                const need = form.elements.namedItem('need').value.trim();
-                if (!name || !phone || !need) return;
-                alert('Thank you. Steelab has received your request and will contact you shortly.');
-                form.reset();
-                closeModal();
-            });
-        }
-    })();
     </script>
 </body>
 

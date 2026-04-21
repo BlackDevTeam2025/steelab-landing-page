@@ -28,16 +28,104 @@ h1, h2, h3, h4 {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 .glass-nav {
-    background: rgba(248, 249, 255, 0.85) !important;
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid #c2c6d8;
+    position: relative;
+    background: linear-gradient(110deg, rgba(1, 21, 105, 0.86), rgba(0, 55, 180, 0.74)) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(186, 230, 253, 0.3);
+    box-shadow: 0 14px 34px rgba(2, 6, 23, 0.22);
+    animation: navFadeIn 0.55s ease-out both;
 }
-html.dark .glass-nav {
-    background: rgba(5, 10, 20, 0.85) !important;
-    border-bottom: 1px solid #1e2d44;
+.glass-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.22) 50%, transparent 100%);
+    transform: translateX(-130%);
+    animation: navShimmer 8.5s ease-in-out infinite;
 }
-.glass-nav .no-scrollbar a {
+.nav-inner {
+    position: relative;
+    z-index: 2;
+}
+.main-content {
+    padding-top: 72px;
+}
+.nav-brand {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(186, 230, 253, 0.65);
+    border-radius: 0.85rem;
+    padding: 0.42rem 0.7rem;
+    box-shadow: 0 8px 18px rgba(2, 6, 23, 0.2);
+}
+.nav-links .nav-link {
+    position: relative;
     flex: 0 0 auto;
+    padding: 0.45rem 0.62rem;
+    font-size: clamp(0.86rem, 0.84rem + 0.2vw, 1.03rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+}
+.nav-links .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.62rem;
+    right: 0.62rem;
+    bottom: 0.1rem;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #7dd3fc, #93c5fd);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+.nav-links .nav-link:hover {
+    color: #ffffff;
+}
+.nav-links .nav-link:hover::after {
+    transform: scaleX(1);
+}
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    border-radius: 9999px;
+    padding: 0.3rem 0.32rem 0.3rem 1.15rem;
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0050cb 0%, #1d4ed8 100%);
+    border: 1px solid rgba(147, 197, 253, 0.6);
+    box-shadow: 0 10px 20px rgba(0, 80, 203, 0.34);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.nav-cta:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+.nav-cta-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.98);
+    color: #1d4ed8;
+    font-size: 1.25rem;
+}
+
+@keyframes navFadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes navShimmer {
+    0% { transform: translateX(-130%); opacity: 0; }
+    22% { opacity: 0.4; }
+    48% { transform: translateX(130%); opacity: 0; }
+    100% { transform: translateX(130%); opacity: 0; }
 }
 #portfolio-filters .filter-btn,
 #portfolio-filters-v2 .filter-btn,
@@ -45,20 +133,23 @@ html.dark .glass-nav {
     flex: 0 0 auto;
 }
 @media (max-width: 900px) {
+    .main-content {
+        padding-top: 64px;
+    }
     .glass-nav .max-w-7xl {
         gap: 0.7rem !important;
         padding-top: 0.65rem !important;
         padding-bottom: 0.65rem !important;
     }
-    .glass-nav img[alt="Steelab logo"] {
+    .nav-brand img[alt="Steelab logo"] {
         height: 30px !important;
     }
-    .glass-nav .no-scrollbar {
+    .nav-links {
         gap: 0.25rem !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-    .glass-nav .no-scrollbar a {
+    .nav-links .nav-link {
         font-size: 0.78rem !important;
         line-height: 1.2 !important;
         padding: 0.45rem 0.55rem !important;
@@ -70,16 +161,105 @@ html.dark .glass-nav {
         padding-left: 0.75rem !important;
         padding-right: 0.75rem !important;
     }
-    .glass-nav img[alt="Steelab logo"] {
+    .nav-brand {
+        padding: 0.28rem 0.55rem;
+        border-radius: 0.72rem;
+    }
+    .nav-brand img[alt="Steelab logo"] {
         height: 26px !important;
     }
-    .glass-nav .no-scrollbar a {
+    .nav-links .nav-link {
         font-size: 0.74rem !important;
         padding: 0.4rem 0.48rem !important;
     }
 }
 .hero-gradient {
     background: linear-gradient(135deg, #0050cb 0%, #0066ff 100%);
+}
+
+/* ===== Hero v2 ===== */
+.hero-tech {
+    min-height: clamp(640px, 84vh, 920px);
+    background:
+        radial-gradient(circle at 50% 14%, rgba(147, 197, 253, 0.32), rgba(147, 197, 253, 0) 44%),
+        radial-gradient(circle at 16% 82%, rgba(56, 189, 248, 0.33), rgba(56, 189, 248, 0) 38%),
+        radial-gradient(circle at 82% 26%, rgba(14, 165, 233, 0.25), rgba(14, 165, 233, 0) 42%),
+        linear-gradient(180deg, #001f91 0%, #0033b8 44%, #0566d2 100%);
+}
+.hero-tech-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.2) 0 1px, transparent 2px) 0 0/180px 180px,
+        radial-gradient(circle at 80% 36%, rgba(255, 255, 255, 0.22) 0 1px, transparent 2px) 0 0/220px 220px,
+        repeating-linear-gradient(
+            108deg,
+            rgba(125, 211, 252, 0.22) 0,
+            rgba(125, 211, 252, 0.22) 2px,
+            transparent 2px,
+            transparent 180px
+        );
+    opacity: 0.55;
+}
+.hero-tech-glow {
+    position: absolute;
+    left: -8%;
+    right: -8%;
+    bottom: -120px;
+    height: 240px;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(125, 211, 252, 0.62) 0%, rgba(125, 211, 252, 0.08) 52%, rgba(125, 211, 252, 0) 72%);
+}
+.hero-skill-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    border-radius: 9999px;
+    padding: 0.55rem 1rem;
+    font-size: 1.7rem;
+    font-size: clamp(0.98rem, 0.95rem + 0.1vw, 1.12rem);
+    line-height: 1;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.96);
+    background: rgba(147, 197, 253, 0.24);
+    border: 1px solid rgba(186, 230, 253, 0.38);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.hero-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.48rem;
+    min-width: 210px;
+    border-radius: 9999px;
+    padding: 1rem 1.8rem;
+    font-size: 1.2rem;
+    font-size: clamp(1.05rem, 1rem + 0.2vw, 1.3rem);
+    line-height: 1;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #10b981 0%, #00c58c 100%);
+    border: 1px solid rgba(110, 231, 183, 0.75);
+    box-shadow: 0 10px 22px rgba(16, 185, 129, 0.32);
+    transition: transform 0.22s ease, filter 0.22s ease;
+}
+.hero-cta-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+.hero-cta-btn .material-symbols-outlined {
+    font-size: 1.35rem;
+}
+
+@media (max-width: 640px) {
+    .hero-tech {
+        min-height: 760px;
+    }
+    .hero-cta-btn {
+        width: 100%;
+        max-width: 320px;
+    }
 }
 
 /* ===== Scroll reveal animation ===== */
@@ -169,6 +349,16 @@ html.dark .glass-nav {
 #lien-he {
     background-color: rgb(0 80 203 / var(--tw-bg-opacity, 1)) !important;
     border-color: rgba(186, 230, 253, 0.8) !important;
+}
+#lien-he .footer-brand-logo {
+    display: block;
+}
+#lien-he .footer-contact-row {
+    width: fit-content;
+    border-radius: 9999px;
+    padding: 0.35rem 0.75rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
 }
 #lien-he .label,
 #lien-he .text-white {
@@ -465,16 +655,6 @@ html.dark .glass-nav {
 }
 #doi-tac .trusted-marquee img:hover {
     transform: translateY(-1px) scale(1.03);
-}
-
-/* ===== Demo modal ===== */
-#demo-modal.hidden {
-    display: none;
-}
-.demo-modal-card {
-    background: #ffffff;
-    border: 1px solid #dbeafe;
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
 }
 
 @keyframes arch-pulse {
